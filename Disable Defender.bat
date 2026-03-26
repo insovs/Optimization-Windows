@@ -72,5 +72,5 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Threats\ThreatSeverit
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Threats\ThreatSeverityDefaultAction" /v "5" /t REG_SZ /d "6" /f
 
 echo. & echo  [OK] Done. A restart is required to apply the changes. & echo.
-timeout /t 3 /nobreak > nul
+timeout /t 2 /nobreak > nul
 pause

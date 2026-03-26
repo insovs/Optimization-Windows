@@ -2,7 +2,6 @@
 rem # Windows Defender / Security Services Disable Script [https://github.com/insovs]
 rem # Disables Microsoft Defender, real-time protection, SmartScreen, notifications, and related security components for maximum control and reduced background activity (latency / performance oriented).
 rem #
-rem # WARNING:
 rem # This will significantly reduce system security.
 rem # Use only if you know what you're doing or if you prioritize maximum performance and lowest latency above all.
 

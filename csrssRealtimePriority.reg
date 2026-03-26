@@ -1,4 +1,4 @@
-Windows Registry Editor Version 5.00
+Windows Registry Editor Version 5.00 - [https://github.com/insovs]
 
 ; Client/Server Runtime Subsystem (csrss.exe) Performance Options. Set IO, CPU and Page priority for csrss.exe to improve responsiveness
 ; CpuPriorityClass = 4 (Realtime), IoPriority & PagePriority = 3 (Above normal).

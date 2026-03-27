@@ -42,8 +42,6 @@ reg add "%R%\CloudExperienceHostOobe" /v Start /t REG_DWORD /d 0 /f >nul 2>&1 &&
 reg add "%R%\DataMarket" /v Start /t REG_DWORD /d 0 /f >nul 2>&1 && echo [OK] DataMarket || echo [ERROR] DataMarket
 reg add "%R%\DefenderApiLogger" /v Start /t REG_DWORD /d 0 /f >nul 2>&1 && echo [OK] DefenderApiLogger || echo [ERROR] DefenderApiLogger
 reg add "%R%\DefenderAuditLogger" /v Start /t REG_DWORD /d 0 /f >nul 2>&1 && echo [OK] DefenderAuditLogger || echo [ERROR] DefenderAuditLogger
-reg add "%R%\Diagtrack-Listener" /v Start /t REG_DWORD /d 0 /f >nul 2>&1 && echo [OK] Diagtrack-Listener || echo [ERROR] Diagtrack-Listener
-reg add "%R%\EventLog-Application" /v Start /t REG_DWORD /d 0 /f >nul 2>&1 && echo [OK] EventLog-Application || echo [ERROR] EventLog-Application
 reg add "%R%\EventLog-Security" /v Start /t REG_DWORD /d 0 /f >nul 2>&1 && echo [OK] EventLog-Security || echo [ERROR] EventLog-Security
 reg add "%R%\EventLog-System" /v Start /t REG_DWORD /d 0 /f >nul 2>&1 && echo [OK] EventLog-System || echo [ERROR] EventLog-System
 reg add "%R%\HolographicDevice" /v Start /t REG_DWORD /d 0 /f >nul 2>&1 && echo [OK] HolographicDevice || echo [ERROR] HolographicDevice
@@ -72,9 +70,13 @@ reg add "%R%\WdiContextLog" /v Start /t REG_DWORD /d 0 /f >nul 2>&1 && echo [OK]
 reg add "%R%\WFP-IPsec Trace" /v Start /t REG_DWORD /d 0 /f >nul 2>&1 && echo [OK] WFP-IPsec Trace || echo [ERROR] WFP-IPsec Trace
 reg add "%R%\WiFiDriverHVSession" /v Start /t REG_DWORD /d 0 /f >nul 2>&1 && echo [OK] WiFiDriverHVSession || echo [ERROR] WiFiDriverHVSession
 reg add "%R%\WiFiDriverHVSessionRepro" /v Start /t REG_DWORD /d 0 /f >nul 2>&1 && echo [OK] WiFiDriverHVSessionRepro || echo [ERROR] WiFiDriverHVSessionRepro
-reg add "%R%\WiFiSession" /v Start /t REG_DWORD /d 0 /f >nul 2>&1 && echo [OK] WiFiSession || echo [ERROR] WiFiSession
 reg add "%R%\WinPhoneCritical" /v Start /t REG_DWORD /d 0 /f >nul 2>&1 && echo [OK] WinPhoneCritical || echo [ERROR] WinPhoneCritical
 
+rem # WARNING: Disabling system logging impact diagnostics and monitoring (Troubleshooting).
+reg add "%R%\DiagLog" /v Start /t REG_DWORD /d 0 /f >nul 2>&1 && echo [OK] DiagLog || echo [ERROR] DiagLog
+reg add "%R%\EventLog-Application" /v Start /t REG_DWORD /d 0 /f >nul 2>&1 && echo [OK] EventLog-Application || echo [ERROR] EventLog-Application
+reg add "%R%\Diagtrack-Listener" /v Start /t REG_DWORD /d 0 /f >nul 2>&1 && echo [OK] Diagtrack-Listener || echo [ERROR] Diagtrack-Listener
+reg add "%R%\WiFiSession" /v Start /t REG_DWORD /d 0 /f >nul 2>&1 && echo [OK] WiFiSession || echo [ERROR] WiFiSession
 
 echo.
 echo [OK] Done. A restart is required to apply the changes.

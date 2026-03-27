@@ -1,4 +1,4 @@
-# MouseDataQueueSize Optimization — [guns.lol/inso.vs](https://guns.lol/inso.vs)
+# Mouse and Keyboard DataQueueSize Optimization
 
 Controls the input buffer size for mouse and keyboard processing in Windows.
 Lower = less latency. Too low = missed inputs, jumps, glitches.

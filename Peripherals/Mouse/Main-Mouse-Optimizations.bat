@@ -31,14 +31,6 @@ echo [*] Forcing linear X/Y curves...
 reg add "HKCU\Control Panel\Mouse" /v "SmoothMouseXCurve" /t REG_SZ /d "000000000000000000000000000000000000000000000000" /f
 reg add "HKCU\Control Panel\Mouse" /v "SmoothMouseYCurve" /t REG_SZ /d "000000000000000000000000000000000000000000000000" /f
 
-:: Cursor magnetism
-echo [*] Disabling cursor magnetism...
-reg add "HKLM\SOFTWARE\Microsoft\Input\Settings\ControllerProcessor\CursorMagnetism" /v AttractionRectInsetInDIPS /t REG_DWORD /d 0 /f
-reg add "HKLM\SOFTWARE\Microsoft\Input\Settings\ControllerProcessor\CursorMagnetism" /v DistanceThresholdInDIPS /t REG_DWORD /d 0 /f
-reg add "HKLM\SOFTWARE\Microsoft\Input\Settings\ControllerProcessor\CursorMagnetism" /v MagnetismDelayInMilliseconds /t REG_DWORD /d 1 /f
-reg add "HKLM\SOFTWARE\Microsoft\Input\Settings\ControllerProcessor\CursorMagnetism" /v MagnetismUpdateIntervalInMilliseconds /t REG_DWORD /d 1 /f
-reg add "HKLM\SOFTWARE\Microsoft\Input\Settings\ControllerProcessor\CursorMagnetism" /v VelocityInDIPSPerSecond /t REG_DWORD /d 0 /f
-
 :: PS/2 mouse polling
 echo [*] Reducing PS/2 polling iterations for minimal latency...
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters" /v PollStatusIterations /t REG_DWORD /d 1 /f

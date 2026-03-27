@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Input\Settings\ControllerProcessor\CursorMagnetism]
+"AttractionRectInsetInDIPS"=dword:00000000
+"DistanceThresholdInDIPS"=dword:00000000
+"MagnetismDelayInMilliseconds"=dword:00000001
+"MagnetismUpdateIntervalInMilliseconds"=dword:00000001
+"VelocityInDIPSPerSecond"=dword:00000000

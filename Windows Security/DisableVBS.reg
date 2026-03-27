@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+; Disables Virtualization-Based Security (VBS) to improve system performance.
+; This key disables virtualization-based security that protects critical system processes by isolating them.
+; Disabling it may improve performance but lowers protection against advanced attacks.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard]
+"EnableVirtualizationBasedSecurity"=dword:00000000

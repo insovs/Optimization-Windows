@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+; Disables Hypervisor-Enforced Code Integrity (HVCI) to improve system performance.
+; This key disables the feature that enforces code integrity at the hypervisor level, which can prevent some unsigned drivers from running.
+; Disabling it may improve system performance but reduces system security.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity]
+"Enabled"=dword:00000000

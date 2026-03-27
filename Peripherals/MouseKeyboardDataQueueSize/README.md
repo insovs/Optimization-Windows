@@ -3,25 +3,6 @@
 Controls the input buffer size for mouse and keyboard processing in Windows.
 Lower = less latency. Too low = missed inputs, jumps, glitches.
 
-## Registry Path
-
-**Mouse**
-`HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters` → `MouseDataQueueSize`
-
-**Keyboard**
-`HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters` → `KeyboardDataQueueSize`
-
-Type: `REG_DWORD` — Decimal value.
-
-## Reference Table
-
-| Decimal | Level        |
-|---------|--------------|
-| 16–18   | Experimental |
-| 18–20   | Advanced     |
-| 20–24   | Recommended  |
-| 24–50   | Safe         |
-
 ## How to Tune
 
 1. Start at `18` decimal, apply the provided `.reg` file and reboot.

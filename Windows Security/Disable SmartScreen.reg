@@ -1,18 +1,58 @@
 Windows Registry Editor Version 5.00
 
-; Disables Windows SmartScreen and related reporting features.
+; Disable SmartScreen for Microsoft Edge
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Storage\microsoft.microsoftedge_8wekyb3d8bbwe\MicrosoftEdge\PhishingFilter]
+"EnabledV9"=dword:00000000       ; Disable phishing filter SmartScreen
+"PreventOverride"=dword:00000000 ; Allow user override (still disabled)
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MRT]
-"DontReportInfectionInformation"=dword:00000001
+[HKEY_CURRENT_USER\Software\Microsoft\Edge]
+"SmartScreenEnabled"=dword:00000000 ; Disable SmartScreen in Edge
+
+[HKEY_CURRENT_USER\Software\Microsoft\Edge\SmartScreenEnabled]
+@=dword:00000000 ; Additional key to disable Edge SmartScreen
+
+; Disable SmartScreen in File Explorer and Windows Shell
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+"SmartScreenEnabled"="off" ; Disable SmartScreen for downloaded files
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
-"EnableSmartScreen"=dword:00000000
+"EnableSmartScreen"=dword:00000000 ; Disable system-wide SmartScreen
+"ShellSmartScreenLevel"=-             ; Remove SmartScreen level setting
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\default\Browser\AllowSmartScreen]
+"value"=dword:00000000 ; Prevent automatic SmartScreen activation in browser
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\default\SmartScreen\EnableSmartScreenInShell]
+"value"=dword:00000000 ; Disable SmartScreen in Windows Shell
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\default\SmartScreen\EnableAppInstallControl]
+"value"=dword:00000000 ; Remove App Install Control checks
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\default\SmartScreen\PreventOverrideForFilesInShell]
+"value"=dword:00000000 ; Allow user to bypass (SmartScreen disabled anyway)
+
+; Disable SmartScreen for Microsoft Store Apps
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\AppHost]
+"EnableWebContentEvaluation"=dword:00000000 ; Disable web content evaluation for Store apps
+"PreventOverride"=dword:00000000 ; Allow user override (still disabled)
+
+; Configure App Install Control
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\SmartScreen]
+"ConfigureAppInstallControlEnabled"=dword:00000001 ; Enable custom App Install Control
+"ConfigureAppInstallControl"="Anywhere"           ; Allow apps from any source
+
+; Disable Windows SmartScreen and reporting features
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MRT]
+"DontReportInfectionInformation"=dword:00000001 ; Prevent sending infection data
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
+"EnableSmartScreen"=dword:00000000 ; Completely disable SmartScreen system-wide
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\PhishingFilter]
-"DontReportInfectionInformation"=dword:00000000
+"DontReportInfectionInformation"=dword:00000000 ; Manage phishing report behavior (disabled)
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\SmartScreen]
-"ConfigureAppInstallControlEnabled"=dword:00000000
+"ConfigureAppInstallControlEnabled"=dword:00000000 ; Disable App Install Control configuration
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Reporting]
-"DisableGenericReports"=dword:00000001
+"DisableGenericReports"=dword:00000001 ; Disable generic security reporting

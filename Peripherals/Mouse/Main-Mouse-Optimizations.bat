@@ -31,10 +31,6 @@ echo [*] Forcing linear X/Y curves...
 reg add "HKCU\Control Panel\Mouse" /v "SmoothMouseXCurve" /t REG_SZ /d "000000000000000000000000000000000000000000000000" /f
 reg add "HKCU\Control Panel\Mouse" /v "SmoothMouseYCurve" /t REG_SZ /d "000000000000000000000000000000000000000000000000" /f
 
-:: PS/2 mouse polling
-echo [*] Reducing PS/2 polling iterations for minimal latency...
-reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters" /v PollStatusIterations /t REG_DWORD /d 1 /f
-
 :: Restart Explorer to apply settings
 echo. & echo [*] Restarting Explorer to apply settings...
 taskkill /f /im explorer.exe >nul

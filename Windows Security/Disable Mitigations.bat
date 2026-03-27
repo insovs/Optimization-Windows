@@ -14,12 +14,10 @@ if /i "%confirm%" neq "y" (echo. & echo  Aborted. & timeout /t 2 /nobreak > nul 
 powershell "ForEach($v in (Get-Command -Name 'Set-ProcessMitigation').Parameters['Disable'].Attributes.ValidValues){Set-ProcessMitigation -System -Disable $v.ToString() -ErrorAction SilentlyContinue; Write-Host 'Disabled: ' $v -ForegroundColor Green}"
 
 :: ── Image File Execution Options ────────────────────────────────────────────────
-:: Removes all IFEO entries (often used by Defender/ETW to inject hooks)
-powershell "Remove-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\*' -Recurse -ErrorAction SilentlyContinue"
+powershell "Remove-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\*' -Recurse -ErrorAction SilentlyContinue" :: Removes all IFEO entries (often used by Defender/ETW to inject hooks)
 
 :: ── BitLocker DMA Protection ────────────────────────────────────────────────────
-:: Disables external DMA protection under BitLocker
-reg add "HKLM\SOFTWARE\Policies\Microsoft\FVE" /v "DisableExternalDMAUnderLock" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\FVE" /v "DisableExternalDMAUnderLock" /t REG_DWORD /d "0" /f :: Disables external DMA protection under BitLocker
 
 :: ── Device Guard / VBS ──────────────────────────────────────────────────────────
 :: Disables Virtualization Based Security (VBS)

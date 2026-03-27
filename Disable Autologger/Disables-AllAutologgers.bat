@@ -1,8 +1,9 @@
 @echo off & title Disable ETW / AutoLogger Traces
 
-rem # Disables Windows ETW auto-loggers to reduce background logging and improve performance.
-rem # WARNING: Disabling system logging impact diagnostics and monitoring.
+rem # Disables Windows ETW auto-loggers to reduce background logging and improve performance & latency.
 rem # Use only if you know what you're doing or if you prioritize maximum performance and lowest latency above all.
+rem # WARNING: Disabling system logging impact diagnostics and monitoring (Troubleshooting).
+rem # https://learn.microsoft.com/en-us/windows/win32/etw/configuring-and-starting-an-autologger-session
 
 :: Auto-elevate to admin
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"

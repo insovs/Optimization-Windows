@@ -1,0 +1,206 @@
+Windows Registry Editor Version 5.00
+
+; Disables USB/HID power saving features affecting mouse, keyboard, and other input devices
+; to reduce input delay, prevent micro-stutters, and ensure consistent polling behavior.
+
+; Increases power usage and may affect sleep or device power management.
+; Use only if you prioritize maximum responsiveness and lowest latency.
+
+; [1] Global USB Enum key - fallback defaults
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USB]
+"AllowIdleIrpInD3"=dword:00000000
+"D3ColdSupported"=dword:00000000
+"DeviceSelectiveSuspended"=dword:00000000
+"EnableSelectiveSuspend"=dword:00000000
+"EnhancedPowerManagementEnabled"=dword:00000000
+"SelectiveSuspendEnabled"=dword:00000000
+"SelectiveSuspendOn"=dword:00000000
+
+; [2] usbflags - latency & idle control
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags]
+"fid_D1Latency"=dword:00000000
+"fid_D2Latency"=dword:00000000
+"fid_D3Latency"=dword:00000000
+"DisableHCS0Idle"=dword:00000001
+"IgnoreHWSerNum"=dword:00000001
+
+; [3] USB service - root level
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USB]
+"DisablePowerDown"=dword:00000001
+"DisableSelectiveSuspend"=dword:00000001
+"EnIdleEndpointSupport"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USB\Parameters]
+"DisableSelectiveSuspend"=dword:00000001
+"DisableSelectiveSuspendTimeout"=dword:00000001
+"DisableZeroLengthControlTransfers"=dword:00000001
+"ForceFullSpeed"=dword:00000001
+"ForceHCResetOnResume"=dword:00000001
+"AllowIdleIrpInD3"=dword:00000000
+"EnableIdlePowerManagement"=dword:00000000
+"DeviceIdleEnabled"=dword:00000000
+"IdleInWorkingState"=dword:00000000
+"EnhancedPowerManagementEnabled"=dword:00000000
+"SelectiveSuspendEnabled"=dword:00000000
+"SystemWakeEnabled"=dword:00000000
+"UserSetDeviceIdleEnabled"=dword:00000000
+"DefaultIdleState"=dword:00000000
+
+; [4] USBXHCI - xHCI controller
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBXHCI\Parameters]
+"DisableLegacyUSBSupport"=dword:00000001
+"DisableSelectiveSuspend"=dword:00000001
+"EnhancedPowerManagementEnabled"=dword:00000000
+"ForceFullSpeed"=dword:00000001
+"IdleEnabled"=dword:00000000
+"LowLatencyMode"=dword:00000001
+"SelectiveSuspendEnabled"=dword:00000000
+"IoQueueWorkItem"=dword:0000000a
+"AllowIdleIrpInD3"=dword:00000000
+"EnableIdlePowerManagement"=dword:00000000
+"DeviceIdleEnabled"=dword:00000000
+"IdleInWorkingState"=dword:00000000
+"SystemWakeEnabled"=dword:00000000
+"UserSetDeviceIdleEnabled"=dword:00000000
+"DefaultIdleState"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBXHCI\Parameters\Wdf]
+"NoExtraBufferRoom"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBXHCI\RootHub]
+"SelectiveSuspendEnabled"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\USBXHCI\Parameters\Device]
+"InterruptThreshold"=dword:00000001
+
+; [5] usbhub - USB 2.0 Hub
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\usbhub\hubg]
+"DisableOnSoftRemove"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\usbhub\Parameters]
+"DisableOnSoftRemove"=dword:00000001
+"EnableAggressiveSuspend"=dword:00000000
+"SelectiveSuspendTimeout"=dword:00000000
+"IoQueueWorkItem"=dword:0000000a
+"DisableSelectiveSuspend"=dword:00000001
+"AllowIdleIrpInD3"=dword:00000000
+"EnableIdlePowerManagement"=dword:00000000
+"DeviceIdleEnabled"=dword:00000000
+"IdleInWorkingState"=dword:00000000
+"EnhancedPowerManagementEnabled"=dword:00000000
+"SelectiveSuspendEnabled"=dword:00000000
+"SystemWakeEnabled"=dword:00000000
+"UserSetDeviceIdleEnabled"=dword:00000000
+"DefaultIdleState"=dword:00000000
+
+; [6] USBHUB3 - USB 3.0 Hub
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBHUB3\Parameters]
+"DisableSelectiveSuspend"=dword:00000001
+"EnhancedPowerManagementEnabled"=dword:00000000
+"ForceFullSpeed"=dword:00000001
+"LowLatencyMode"=dword:00000001
+"SelectiveSuspendEnabled"=dword:00000000
+"DisableWakeFromSuspend"=dword:00000001
+"AllowIdleIrpInD3"=dword:00000000
+"EnableIdlePowerManagement"=dword:00000000
+"DeviceIdleEnabled"=dword:00000000
+"IdleInWorkingState"=dword:00000000
+"SystemWakeEnabled"=dword:00000000
+"UserSetDeviceIdleEnabled"=dword:00000000
+"DefaultIdleState"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\USBHUB3\Parameters\Device]
+"InterruptThreshold"=dword:00000001
+
+; [7] usbehci - USB 2.0 Enhanced Host Controller
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\usbehci\Parameters]
+"AllowIdleIrpInD3"=dword:00000000
+"EnableIdlePowerManagement"=dword:00000000
+"DeviceIdleEnabled"=dword:00000000
+"IdleInWorkingState"=dword:00000000
+"EnhancedPowerManagementEnabled"=dword:00000000
+"SelectiveSuspendEnabled"=dword:00000000
+"SystemWakeEnabled"=dword:00000000
+"UserSetDeviceIdleEnabled"=dword:00000000
+"DefaultIdleState"=dword:00000000
+"DisableSelectiveSuspend"=dword:00000001
+
+; [8] usbuhci - USB 1.1 Universal Host Controller
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\usbuhci\Parameters]
+"AllowIdleIrpInD3"=dword:00000000
+"EnableIdlePowerManagement"=dword:00000000
+"DeviceIdleEnabled"=dword:00000000
+"IdleInWorkingState"=dword:00000000
+"EnhancedPowerManagementEnabled"=dword:00000000
+"SelectiveSuspendEnabled"=dword:00000000
+"SystemWakeEnabled"=dword:00000000
+"UserSetDeviceIdleEnabled"=dword:00000000
+"DefaultIdleState"=dword:00000000
+"DisableSelectiveSuspend"=dword:00000001
+
+; [9] HidUsb - HID over USB driver
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HidUsb]
+"IdleEnabled"=dword:00000000
+"DisableSelectiveSuspend"=dword:00000001
+"EnableIdlePowerManagement"=dword:00000000
+"IdleInWorkingState"=dword:00000000
+"SelectiveSuspendEnabled"=dword:00000000
+"DeviceIdleEnabled"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters]
+"IdleEnabled"=dword:00000000
+"EnableSelectiveSuspend"=dword:00000000
+"AllowIdleIrpInD3"=dword:00000000
+"EnableIdlePowerManagement"=dword:00000000
+"DeviceIdleEnabled"=dword:00000000
+"IdleInWorkingState"=dword:00000000
+"EnhancedPowerManagementEnabled"=dword:00000000
+"SelectiveSuspendEnabled"=dword:00000000
+"SystemWakeEnabled"=dword:00000000
+"UserSetDeviceIdleEnabled"=dword:00000000
+"DefaultIdleState"=dword:00000000
+"DisableWakeFromSuspend"=dword:00000001
+
+; [10] HidClass - HID class driver
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HidClass\Parameters]
+"AllowIdleIrpInD3"=dword:00000000
+"EnableIdlePowerManagement"=dword:00000000
+"DeviceIdleEnabled"=dword:00000000
+"IdleInWorkingState"=dword:00000000
+"EnhancedPowerManagementEnabled"=dword:00000000
+"SelectiveSuspendEnabled"=dword:00000000
+"SystemWakeEnabled"=dword:00000000
+"UserSetDeviceIdleEnabled"=dword:00000000
+"DefaultIdleState"=dword:00000000
+
+; [11] xusb22 - Xbox/gamepad USB driver
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\xusb22\Parameters]
+"IoQueueWorkItem"=dword:0000000a
+
+; [12] usbaudio - USB Audio driver (power saving only, no audio tuning)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\usbaudio\Parameters]
+"AllowIdleIrpInD3"=dword:00000000
+"EnableIdlePowerManagement"=dword:00000000
+"DeviceIdleEnabled"=dword:00000000
+"IdleInWorkingState"=dword:00000000
+"EnhancedPowerManagementEnabled"=dword:00000000
+"SelectiveSuspendEnabled"=dword:00000000
+"SystemWakeEnabled"=dword:00000000
+"UserSetDeviceIdleEnabled"=dword:00000000
+"DefaultIdleState"=dword:00000000
+
+; [13] WinUsb - Generic USB driver
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinUsb\Parameters]
+"AllowIdleIrpInD3"=dword:00000000
+"EnableIdlePowerManagement"=dword:00000000
+"DeviceIdleEnabled"=dword:00000000
+"IdleInWorkingState"=dword:00000000
+"EnhancedPowerManagementEnabled"=dword:00000000
+"SelectiveSuspendEnabled"=dword:00000000
+"SystemWakeEnabled"=dword:00000000
+"UserSetDeviceIdleEnabled"=dword:00000000
+"DefaultIdleState"=dword:00000000
+
+; [14] USB surprise removal / AttemptRecovery
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\USB\AutomaticSurpriseRemovals]
+"AttemptRecoveryFromUsbPowerDrain"=dword:00000000

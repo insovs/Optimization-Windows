@@ -2,10 +2,9 @@
 
 # ⚡ Performance Manager
 
-**System-level optimizations for Windows games and applications.**
-this is a dark-themed WPF GUI built entirely in PowerShell that lets you apply low-level Windows optimizations to any game or application.
-
-It features a splash screen with quick-access shortcuts and a full sidebar navigation across 7 optimization modules, all manageable from a single interface. Every option is designed to improve performance and reduce latency.
+A PowerShell GUI to apply system-level Windows optimizations — CPU priority, network QoS,
+GPU preference, Firewall rules, Defender exclusions, and Fullscreen tweaks.
+All in one place. No manual registry editing. No third-party dependencies.
 
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1%2B-blue?logo=powershell)
 ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey?logo=windows)
@@ -14,7 +13,7 @@ It features a splash screen with quick-access shortcuts and a full sidebar navig
 
 </div>
 
----
+---****
 
 ## ✨ Features
 

@@ -14,6 +14,8 @@ All in one place. No manual registry editing. No third-party dependencies.
 </div>
 
 ---
+<img width="531" height="570" alt="image" src="https://github.com/user-attachments/assets/82179b9d-c8cd-4fde-852f-8c8e6afb454e" />
+---
 
 ## ✨ Features
 

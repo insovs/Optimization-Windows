@@ -1223,8 +1223,8 @@ function Add-CpuRule { param([string]$exePath)
         }
         $perfPath = Join-Path $keyPath 'PerfOptions'
         if (-not (Test-Path $perfPath)) { New-Item -Path $perfPath -Force -ErrorAction Stop | Out-Null }
-        Set-ItemProperty -Path $perfPath -Name 'CpuPriorityClass' -Value 3 -Type DWord
-        Set-ItemProperty -Path $perfPath -Name 'IoPriority'       -Value 3 -Type DWord
+        Set-ItemProperty -Path $perfPath -Name 'CpuPriorityClass' -Value 3 -Type DWord   # Apply The Optimization
+        Set-ItemProperty -Path $perfPath -Name 'IoPriority'       -Value 3 -Type DWord   # Apply The Optimization
         Load-CpuRules
         Show-SuccessPopup -exeName $exeName -line1 'CPU Priority  High' -line2 'IO Priority  High'
         Set-Status "Priority set: $exeName" '#22C55E'
@@ -1308,7 +1308,7 @@ function Add-QosRule { param([string]$exePath)
         if (Test-Path $keyPath) { Set-Status "Already exists: $exeName" '#F59E0B'; return }
         New-Item -Path $keyPath -Force -ErrorAction Stop | Out-Null
         @{
-            'Version'='1.0'; 'Application Name'=$exeName; 'AppPathName'=$exePath
+            'Version'='1.0'; 'Application Name'=$exeName; 'AppPathName'=$exePath  # Apply The Optimization
             'DSCP Value'='46'; 'Throttle Rate'='-1'; 'Protocol'='*'
             'Local Port'='*'; 'Remote Port'='*'; 'Local IP'='*'
             'Local IP Prefix Length'='*'; 'Remote IP'='*'; 'Remote IP Prefix Length'='*'
@@ -1484,7 +1484,7 @@ function Add-FirewallRule { param([string]$exePath)
     $exeName  = [System.IO.Path]::GetFileName($exePath)
     $baseName = "PerfMgr_$([System.IO.Path]::GetFileNameWithoutExtension($exePath))"
     try {
-        New-NetFirewallRule -DisplayName "${baseName}_In"  -Direction Inbound  -Program $exePath -Action Allow -ErrorAction SilentlyContinue | Out-Null
+        New-NetFirewallRule -DisplayName "${baseName}_In"  -Direction Inbound  -Program $exePath -Action Allow -ErrorAction SilentlyContinue | Out-Null  
         New-NetFirewallRule -DisplayName "${baseName}_Out" -Direction Outbound -Program $exePath -Action Allow -ErrorAction SilentlyContinue | Out-Null
         Show-SuccessPopup -exeName $exeName -line1 'Firewall  Inbound + Outbound Allow'
         Set-Status "Firewall rules added: $exeName" '#22C55E'
@@ -1732,9 +1732,9 @@ function Load-FsoRules {
 $script:BtnFsoToggle.Add_Click({
     try {
         if (-not (Test-Path $script:FullscreenKey)) { New-Item -Path $script:FullscreenKey -Force | Out-Null }
-        Set-ItemProperty -Path $script:FullscreenKey -Name 'GameDVR_FSEBehaviorMode'              -Value 2 -Type DWord -Force
-        Set-ItemProperty -Path $script:FullscreenKey -Name 'GameDVR_HonorUserFSEBehaviorMode'     -Value 1 -Type DWord -Force
-        Set-ItemProperty -Path $script:FullscreenKey -Name 'GameDVR_DXGIHonorFSEWindowsCompatible' -Value 1 -Type DWord -Force
+        Set-ItemProperty -Path $script:FullscreenKey -Name 'GameDVR_FSEBehaviorMode'              -Value 2 -Type DWord -Force   # Apply The Optimization
+        Set-ItemProperty -Path $script:FullscreenKey -Name 'GameDVR_HonorUserFSEBehaviorMode'     -Value 1 -Type DWord -Force   # Apply The Optimization
+        Set-ItemProperty -Path $script:FullscreenKey -Name 'GameDVR_DXGIHonorFSEWindowsCompatible' -Value 1 -Type DWord -Force  # Apply The Optimization
         Refresh-FullscreenButtons
         Show-SuccessPopup -exeName 'System-wide' -line1 'Fullscreen Optimizations  Disabled'
         Set-Status 'FSO disabled system-wide' '#22C55E'

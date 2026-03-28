@@ -82,7 +82,6 @@ All changes are **non-destructive** and can be removed from within the app using
 
 ## ⚠️ Notes
 
-- **Windows Defender module** will display a warning banner if Defender is unavailable (disabled by a third-party AV, service not running, etc.) with a detailed explanation of the cause.
 - **Run As Admin**: some apps may refuse to launch when this flag is set — remove the rule if that happens.
 - **FSO (Fullscreen Optimizations)**: system-wide disable writes to `GameConfigStore`. Per-app disable creates a child key under `GameConfigStore\Children` with a unique GUID and the executable path.
 - All registry operations are reversible. No system files are modified.

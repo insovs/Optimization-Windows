@@ -13,7 +13,7 @@ All in one place. No manual registry editing. No third-party dependencies.
 
 </div>
 
----****
+---
 
 ## ✨ Features
 

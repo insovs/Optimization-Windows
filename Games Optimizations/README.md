@@ -15,6 +15,8 @@ All in one place. No manual registry editing. No third-party dependencies.
 
 ---
 <img width="531" height="570" alt="image" src="https://github.com/user-attachments/assets/82179b9d-c8cd-4fde-852f-8c8e6afb454e" />
+<img width="489" height="533" alt="image" src="https://github.com/user-attachments/assets/616b7091-f9f8-4a02-8ec4-111e6332c5a5" />
+
 ---
 
 ## ✨ Features

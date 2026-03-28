@@ -3,7 +3,7 @@
 # ⚡ Performance Manager
 
 A PowerShell GUI to apply system-level Windows optimizations — CPU priority, network QoS,
-GPU preference, Firewall rules, Defender exclusions, and Fullscreen tweaks.
+Firewall rules, Defender exclusions, GPU preference, and Fullscreen tweaks.
 All in one place. No manual registry editing. No third-party dependencies.
 
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1%2B-blue?logo=powershell)

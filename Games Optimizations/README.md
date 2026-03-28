@@ -106,3 +106,24 @@ Pull requests are welcome. If you find a bug or want to suggest a new optimizati
 <div align="center">
 <sub>Built with PowerShell + WPF · No external dependencies · 100% native Windows APIs</sub>
 </div>
+
+---
+
+## 🖼️ Screenshots
+
+<table>
+<tr>
+<td align="center" width="50%">
+<img width="489" height="533" alt="Splash Screen" src="https://github.com/user-attachments/assets/616b7091-f9f8-4a02-8ec4-111e6332c5a5" />
+<br/>
+<sub><b>Splash Screen</b> — Pick a module and jump straight to it.</sub>
+</td>
+<td align="center" width="50%">
+<img width="531" height="570" alt="Main Window" src="https://github.com/user-attachments/assets/82179b9d-c8cd-4fde-852f-8c8e6afb454e" />
+<br/>
+<sub><b>Main Window</b> — Sidebar navigation, active rules list, live status bar.</sub>
+</td>
+</tr>
+</table>
+
+---

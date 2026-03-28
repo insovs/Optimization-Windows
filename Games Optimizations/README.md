@@ -46,21 +46,6 @@ All in one place. No manual registry editing. No third-party dependencies.
 
 ---
 
-## 🖼️ Interface
-
-The app opens with a **splash screen** listing all available modules. Clicking a module takes you directly to its configuration page.
-
-The main window features:
-- A **sidebar navigation** with 7 pages
-- A **scrollable content area** per page with explanations, add buttons, and a list of active rules
-- A **status bar** with live feedback on every action
-- Full **window resizing** support
-- A custom dark theme with no window chrome (frameless WPF window)
-
----
-
-## 🚀 Getting Started
-
 ### Requirements
 
 - Windows 10 / 11

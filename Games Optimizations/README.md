@@ -15,8 +15,6 @@ All in one place. No manual registry editing. No third-party dependencies.
 
 ---
 
-## 🖼️ Screenshots
-
 <table>
 <tr>
 <td align="center" width="50%">

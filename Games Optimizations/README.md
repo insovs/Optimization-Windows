@@ -3,7 +3,7 @@
 # ⚡ Performance Manager
 
 **System-level optimizations for Windows — games and applications**
-**Performance Manager** is a dark-themed WPF GUI built entirely in PowerShell that lets you apply low-level Windows optimizations to any game or application.
+this is a dark-themed WPF GUI built entirely in PowerShell that lets you apply low-level Windows optimizations to any game or application.
 
 It features a splash screen with quick-access shortcuts and a full sidebar navigation across 7 optimization modules, all manageable from a single interface. Every option is designed to improve performance and reduce latency.
 

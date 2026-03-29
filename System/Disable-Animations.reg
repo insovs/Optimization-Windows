@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+; Disable Windows Animations
+
+[HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics]
+"MinAnimate"="0"

@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+; Disable Windows Error Reporting (WerSvc)
+; Stops crash report collection and upload to Microsoft servers.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WerSvc]
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting]
+"Disabled"=dword:00000001

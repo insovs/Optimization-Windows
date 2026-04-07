@@ -2,7 +2,7 @@
 
 Scripts to disable Windows Defender and related security services.
 
-> ⚠ **Warning:** These scripts significantly reduce system security.
+> These scripts significantly reduce system security but drastically improve performance and latency. The choice is yours, depending on your needs (I recommend disabling Defender).
 
 ---
 

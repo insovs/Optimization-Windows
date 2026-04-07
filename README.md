@@ -1,6 +1,6 @@
 # Optimization-Windows
 
-This project provides a collection of scripts and tools etc designed to optimize your Windows system, especially for better performance & Latency.
+This project provides a collection of scripts and tools etc designed to optimize your Windows system, especially for better performance & latency.
 
 ## Content
 
@@ -24,8 +24,9 @@ New optimizations and improvements will be added over time.
 
 Even though the project is not finished, **everything currently included is functional and can already be used**.
 
- It is recommended to:
+It is recommended to:
 
+* **Run scripts using PowerRun (found in the "Run with privileges" section)** — this allows them to execute with TrustedInstaller privileges, ensuring that all changes are applied correctly.
 * Understand what each script does before running it
 * Create a system restore point for safety
 
@@ -36,3 +37,5 @@ To provide a complete and evolving base for optimizing Windows easily, whether f
 ---
 
 Feel free to check back regularly for updates!
+
+---

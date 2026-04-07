@@ -26,7 +26,6 @@ This script is designed to **disable all Windows ETW auto-loggers** (Event Traci
 ---
 
 ## Auto-Loggers Disabled
-The script disables the following auto-loggers:
 
 * AppModel
 * AutoLogger-Diagtrack-Listener

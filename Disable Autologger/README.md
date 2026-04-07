@@ -2,7 +2,7 @@
 
 This script is designed to **disable all Windows ETW auto-loggers** (Event Tracing for Windows) to reduce background logging, which can improve system performance and latency.
 
-> **⚠ Warning:** Disabling these loggers may affect diagnostics, monitoring, and troubleshooting. Only use this script if you understand the implications or prioritize maximum performance above all else.
+> Disabling these loggers may affect diagnostics, monitoring, and troubleshooting. Only use this script if you understand the implications or prioritize maximum performance above all else.
 
 ---
 
@@ -12,10 +12,7 @@ This script is designed to **disable all Windows ETW auto-loggers** (Event Traci
 * Reduces background logging overhead
 * Improves system performance and lowers latency
  
-
 ---
-
-
 
 ## Usage
 
@@ -25,8 +22,6 @@ This script is designed to **disable all Windows ETW auto-loggers** (Event Traci
 2. **Run with PowerRun:**
    To ensure all changes are applied correctly, run the script via PowerRun.
    The script automatically relaunches itself as **TrustedInstaller** if not already.
-
-
 
 ---
 
@@ -76,7 +71,6 @@ The script disables the following auto-loggers:
 * Diagtrack-Listener
 * WiFiSession
  
-
 ---
 
 ## References

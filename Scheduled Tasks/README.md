@@ -16,12 +16,12 @@ The script targets:
 
 The script automatically elevates to Administrator.
 
-## 🚀 How to Use
+## How to Use
 
 1. Download `Disable Scheduled Tasks.bat`.
 2. Run it with PowerRun.exe (auto-elevation will request admin privileges).
 
-## ⚠️ Note
+## Note
 
 No core system or security-critical tasks are disabled.
 All changes are reversible via Task Scheduler.

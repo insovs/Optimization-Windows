@@ -1,4 +1,4 @@
-# WiFi
+# WiFi Section
 
 **DisableWiFi.bat** – Completely disables WiFi.
 **EnableWiFi.bat** – Restores WiFi (services, tasks, adapters).

@@ -5,7 +5,7 @@
 
 ---
 
-## ⚡ Features (Disable)
+## Features (Disable)
 
 * Stops & disables WiFi services: `WlanSvc`, `vwififlt`, `Wcmsvc`
 * Disables scheduled WiFi tasks: `WiFiTask`, `CDSSync`, `MoProfileManagement`, `NotificationTask`, `OobeDiscovery`

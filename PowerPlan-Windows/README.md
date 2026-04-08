@@ -50,9 +50,6 @@ Open **Control Panel → Power Options**, switch to a default Windows plan, and 
 > [!NOTE]
 > No permanent system files are modified — switching plans reverts everything.
 
-> [!IMPORTANT]
-> Designed for **desktop / mains power**. Not recommended on battery.
-
 ---
 
 <div align="center">

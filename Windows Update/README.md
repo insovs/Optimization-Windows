@@ -20,16 +20,16 @@
 
 ## How to Use
 
-**Disable Windows Updates**
+## **Disable Windows Updates**
 1. Run `Wub.exe` as Administrator
 2. Select "Disable Updates"
 3. Click "Apply Now"
 
-**Re-enable Windows Updates**
+## **Re-enable Windows Updates**
 1. Select "Enable Updates"
 2. Click "Apply Now"
 
-**Advanced Settings**
+## **Advanced Settings**
 * Click "Menu" > Service List to see which Windows services are affected.
 * You can modify `Wub.ini` for additional configurations.
 

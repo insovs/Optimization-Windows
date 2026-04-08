@@ -37,6 +37,7 @@ This script is designed to **disable all Windows ETW auto-loggers** (Event Traci
 * DefenderAuditLogger
 * EventLog-Security
 * EventLog-System
+* EventLog-Application
 * HolographicDevice
 * LwtNetLog
 * Mellanox-Kernel
@@ -65,7 +66,6 @@ This script is designed to **disable all Windows ETW auto-loggers** (Event Traci
 * WiFiDriverHVSessionRepro
 * WinPhoneCritical
 * DiagLog
-* EventLog-Application
 * Diagtrack-Listener
 * WiFiSession
  

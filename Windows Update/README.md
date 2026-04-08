@@ -1,12 +1,12 @@
 # Windows Update Blocker (WUB)
 
-<div align="center">
-
 **Windows Update Blocker** is a portable tool that lets you disable or re-enable Windows Updates with a single click — preventing unwanted changes, slowdowns, or forced restarts.
 
+<details>
+<summary>▶ Show Utility</summary>
+<br>
 <img width="422" height="207" alt="image" src="https://github.com/user-attachments/assets/bb07bf3b-1303-4a03-936e-c0bfea330df2" />
-
-</div>
+</details>
 
 ---
 

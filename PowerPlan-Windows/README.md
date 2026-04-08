@@ -9,13 +9,16 @@ Imports and activates a custom **PowerPlan** to maximize performance and minimiz
 
 ## Installation
 
-Download `insopti-PowerPlan.ps1` from **[Releases](https://github.com/insovs/insopti-PowerPlan/releases)**, then **right-click** → **Run with PowerShell**.
+Download `insopti-PowerPlan.ps1`, then **right-click** → **Run with PowerShell**.
+
+The script will automatically request administrator privileges, then prompt you to select the profile suited to your CPU configuration.
 
 > [!CAUTION]
-> If PowerShell scripts are blocked, run first:
+> If PowerShell scripts are blocked on your system, enable execution first:
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 > ```
+> Or use **[EnablePowerShellScript](https://github.com/insovs/EnablePowerShellScript)** for a one-click solution.
 
 ---
 

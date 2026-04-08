@@ -2,6 +2,9 @@
 
 Imports and activates a custom **PowerPlan** to maximize performance and minimize latency.
 
+> [!NOTE]
+> The Power Plan script has its own dedicated repository with more details: **[insopti-PowerPlan](https://github.com/insovs/insopti-PowerPlan)**
+
 ---
 
 ## Installation

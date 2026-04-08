@@ -33,11 +33,11 @@ Applies the following registry keys to `HKLM\SYSTEM\CurrentControlSet\Services\T
 | `TCPNoDelay` | `1` | Disables Nagle's algorithm — packets are sent immediately, not buffered. |
 | `TcpDelAckTicks` | `0` | Sets ACK delay to minimum (0ms). |
 
-The script lists all detected network adapters, lets you pick one or apply to all, then automatically restarts the adapter(s) to apply changes — no reboot required.
+The script lists all detected network adapters, lets you pick one or apply to all, then automatically restarts the adapter(s) to apply changes.
 
 ---
 
-## MSI Mode — what it does
+## MSI Mode
 
 By default, network adapters use legacy INTx interrupts shared across devices. Enabling MSI gives the adapter a dedicated interrupt line, reducing CPU latency and contention during high-frequency network events (gaming, low-latency trading, real-time apps).
 
@@ -45,11 +45,11 @@ Changes applied per PCI network adapter:
 - `MSISupported = 1` — enables Message Signaled Interrupts.
 - `DevicePriority = 3` — sets interrupt handling to high priority.
 
-Visible in **MSI Util v3** after applying. **Restart required.**
+Visible in **MSI Util v3** after applying.
 
 ---
 
-## Cloudflare DNS — what it does
+## Cloudflare DNS
 
 Replaces your current DNS servers with Cloudflare's on every active interface:
 
@@ -85,6 +85,4 @@ Only use if you are on a permanent wired Ethernet connection. Use `EnableWiFi.ba
 
 1. Run as **Administrator** (right-click → Run as administrator).
 2. `.reg` files: double-click or `regedit /s file.reg` as admin.
-3. The TCP optimization script will prompt you to select which adapter to configure.
-4. WiFi scripts must be run via `PowerRun.exe` for full service and adapter access.
-5. **Restart required** for MSI Mode, `NetworkThrottlingIndex`, and WiFi scripts. All other tweaks apply immediately or after adapter restart.
+3. WiFi scripts must be run via `PowerRun.exe` for full service and adapter access.

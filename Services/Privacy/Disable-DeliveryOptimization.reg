@@ -3,8 +3,5 @@ Windows Registry Editor Version 5.00
 ; Disable Delivery Optimization (DoSvc)
 ; Stops Windows from using your bandwidth to upload updates to other PCs on the internet.
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DoSvc]
-"Start"=dword:00000004
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization]
 "DODownloadMode"=dword:00000000

@@ -1,0 +1,11 @@
+Windows Registry Editor Version 5.00
+
+; Disables online speech recognition (sends voice data to Microsoft servers).
+; Local speech recognition (offline) is unaffected.
+; WARNING: Cortana and Hey Cortana voice features will stop working.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SpeechRuntime]
+"Start"=dword:00000004
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Speech_OneCore\Settings\OnlineSpeechPrivacy]
+"HasAccepted"=dword:00000000

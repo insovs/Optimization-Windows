@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+; Disables Diagnostic Hub Standard Collector Service.
+; Collects performance and diagnostic data for Microsoft.
+; Only useful for developers using Visual Studio diagnostics tools.
+; WARNING: Skip if you use Visual Studio performance profiling tools.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\diagnosticshub.standardcollector.service]
+"Start"=dword:00000004

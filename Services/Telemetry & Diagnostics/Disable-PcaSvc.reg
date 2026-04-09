@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Disables Program Compatibility Assistant Service (PcaSvc).
+; Monitors every app you launch to detect compatibility issues.
+; Useless on a stable, configured PC.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PcaSvc]
+"Start"=dword:00000004

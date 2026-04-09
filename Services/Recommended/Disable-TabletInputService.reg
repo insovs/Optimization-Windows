@@ -1,7 +1,0 @@
-Windows Registry Editor Version 5.00
-
-; Disables pen and touch input support.
-; WARNING: Do NOT apply if you use a touchscreen or stylus.
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TabletInputService]
-"Start"=dword:00000004

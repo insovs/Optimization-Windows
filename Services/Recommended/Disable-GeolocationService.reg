@@ -1,7 +1,0 @@
-Windows Registry Editor Version 5.00
-
-; Disables location sharing with apps and Windows features.
-; Breaks: automatic timezone, Find My Device, location-based apps.
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lfsvc]
-"Start"=dword:00000004

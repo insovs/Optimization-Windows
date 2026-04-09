@@ -1,7 +1,0 @@
-Windows Registry Editor Version 5.00
-
-; Disables IPv6 tunneling (Teredo, 6to4, ISATAP).
-; Safe on IPv4-only networks. Breaks IPv6 VPNs and DirectAccess.
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\iphlpsvc]
-"Start"=dword:00000004

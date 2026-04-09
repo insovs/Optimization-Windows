@@ -1,7 +1,0 @@
-Windows Registry Editor Version 5.00
-
-; Disables Xbox Live cloud save sync.
-; WARNING: Do NOT apply if you use Xbox Game Pass or Xbox cloud saves.
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\XblGameSave]
-"Start"=dword:00000004

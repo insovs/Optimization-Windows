@@ -1,7 +1,0 @@
-Windows Registry Editor Version 5.00
-
-; Disable Retail Demo Service (RetailDemo)
-; Removes the store demo mode service. Completely useless on a personal PC.
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RetailDemo]
-"Start"=dword:00000004

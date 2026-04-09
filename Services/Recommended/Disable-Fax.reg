@@ -1,7 +1,0 @@
-Windows Registry Editor Version 5.00
-
-; Disable Fax Service
-; Completely useless on a gaming or personal PC. No fax hardware, no need.
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Fax]
-"Start"=dword:00000004

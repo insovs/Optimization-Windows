@@ -1,8 +1,0 @@
-Windows Registry Editor Version 5.00
-
-; Disables network resource publishing (makes PC visible on local network).
-; Breaks: PC visibility in Network Explorer for other devices.
-; Safe if you do not share files or printers on your local network.
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\FDResPub]
-"Start"=dword:00000004

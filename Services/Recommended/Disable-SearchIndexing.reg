@@ -1,7 +1,0 @@
-Windows Registry Editor Version 5.00
-
-; Disable Windows Search Indexing
-; Stops background file indexing that consumes CPU and disk resources.
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WSearch]
-"Start"=dword:00000004

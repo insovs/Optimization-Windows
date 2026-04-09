@@ -1,7 +1,0 @@
-Windows Registry Editor Version 5.00
-
-; Disables legacy NetBIOS over TCP/IP support.
-; Safe on all modern home networks. Only needed on old Windows domains.
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lmhosts]
-"Start"=dword:00000004

@@ -1,9 +1,0 @@
-Windows Registry Editor Version 5.00
-
-; Disables the "Diagnostic Policy Service" (DPS)
-; This service detects and troubleshoots Windows components automatically.
-; It is being deprecated by Microsoft.
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DPS]
-"Start"=dword:00000004
-

@@ -1,7 +1,0 @@
-Windows Registry Editor Version 5.00
-
-; Disables NTFS link tracking across network/domain volumes.
-; Safe if not on a Windows domain. No impact on gaming or local files.
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TrkWks]
-"Start"=dword:00000004

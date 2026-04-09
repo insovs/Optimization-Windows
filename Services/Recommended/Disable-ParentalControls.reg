@@ -1,7 +1,0 @@
-Windows Registry Editor Version 5.00
-
-; Disables Windows parental controls enforcement.
-; Safe if you have no child accounts on this PC.
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WpcMonSvc]
-"Start"=dword:00000004

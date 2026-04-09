@@ -1,7 +1,0 @@
-Windows Registry Editor Version 5.00
-
-; Disables "Run as different user" functionality.
-; Safe if you are the sole user/admin of this PC.
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\seclogon]
-"Start"=dword:00000004

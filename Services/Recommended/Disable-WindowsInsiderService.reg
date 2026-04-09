@@ -1,7 +1,0 @@
-Windows Registry Editor Version 5.00
-
-; Disables the Windows Insider Program service.
-; Safe if you are not enrolled in the Windows Insider Program.
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wisvc]
-"Start"=dword:00000004

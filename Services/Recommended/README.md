@@ -15,7 +15,7 @@ Double-click any `.reg` file and confirm to apply it. **Create a Restore Point f
 | `Disable-DiagnosticPolicy.reg` | Auto troubleshooting (mostly useless) | recommended |
 | `Disable-WAPPushRouting.reg` | Another Microsoft telemetry channel | recommended |
 | `Disable-WindowsErrorReporting.reg` | Sends crash reports to Microsoft | recommended |
-| `Disable-WindowsInsiderService.reg` | Windows Insider beta program service | Only needed if you are in the Insider Program |
+| `Disable-WindowsInsiderService.reg` | Windows Insider beta program service | (recommended) / Only needed if you are in the Insider Program |
 
 ---
 
@@ -25,10 +25,10 @@ Double-click any `.reg` file and confirm to apply it. **Create a Restore Point f
 | File | What it disables | Watch out |
 |------|-----------------|-----------|
 | `Disable-GameDVR-GameBar.reg` | Background game recording (Win+G overlay) | (recommended) / Skip if you record clips with Xbox Game Bar |
-| `Disable-XboxServices.reg` | Xbox background services | Skip if you use Xbox Game Pass |
-| `Disable-XboxLiveAuthManager.reg` | Xbox Live login service | Skip if you use Xbox Game Pass |
-| `Disable-XboxLiveGameSave.reg` | Xbox cloud save sync | Skip if you use Xbox cloud saves |
-| `Disable-XboxAccessoryManagement.reg` | Xbox wired accessory driver | Skip if you use a wired Xbox controller |
+| `Disable-XboxServices.reg` | Xbox background services | (recommended) / Skip if you use Xbox Game Pass |
+| `Disable-XboxLiveAuthManager.reg` | Xbox Live login service | (recommended) / Skip if you use Xbox Game Pass |
+| `Disable-XboxLiveGameSave.reg` | Xbox cloud save sync | (recommended) / Skip if you use Xbox cloud saves |
+| `Disable-XboxAccessoryManagement.reg` | Xbox wired accessory driver | (recommended) / Skip if you use a wired Xbox controller |
 | `Disable-SearchIndexing.reg` | Constant background disk indexing | Windows Search bar won't find files anymore |
 
 ---

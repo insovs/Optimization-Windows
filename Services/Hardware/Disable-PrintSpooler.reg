@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Disable Print Spooler
+; Frees RAM and CPU consumed by the print queue manager.
+; Only disable if you have no printer connected.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Spooler]
+"Start"=dword:00000004

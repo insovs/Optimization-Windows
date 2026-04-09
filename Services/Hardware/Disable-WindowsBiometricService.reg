@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Disables fingerprint and facial recognition (Windows Hello).
+; WARNING: Do NOT apply if you use face or fingerprint login.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc]
+"Start"=dword:00000004

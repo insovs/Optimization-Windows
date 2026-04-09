@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Disables WAP Push message routing used for telemetry by Microsoft.
+; Safe to disable on all personal PCs. Privacy improvement.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\dmwappushservice]
+"Start"=dword:00000004

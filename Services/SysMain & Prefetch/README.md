@@ -23,4 +23,4 @@ They were designed to speed up slow hard drives — on modern SSDs they are unne
 | File | What it disables | Watch out |
 |------|-----------------|-----------|
 | `Disable-SysMain.reg` | SysMain service (formerly Superfetch) — preloads apps into RAM in the background | Keep enabled if your system drive is an HDD |
-| `Disable-Prefetch.reg` | Windows Prefetch — preloads app data on startup | Keep enabled if your system drive is an HDD |
+| `Disable-Prefetch.reg` | Windows Prefetch, Superfetch and boot tracing (`EnablePrefetcher`, `EnableSuperfetch`, `EnableBootTrace` all set to 0) | Keep enabled if your system drive is an HDD |

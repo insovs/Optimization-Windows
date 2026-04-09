@@ -4,8 +4,5 @@ Windows Registry Editor Version 5.00
 ; Collects data on how you type and write to improve Microsoft services.
 ; WARNING: Skip if you use a stylus or pen input device.
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TabletInputService]
-"Start"=dword:00000004
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsInkWorkspace]
 "AllowWindowsInkWorkspace"=dword:00000000

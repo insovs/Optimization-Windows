@@ -10,11 +10,11 @@ Double-click any `.reg` file and confirm to apply it. **Create a Restore Point f
 
 | File | What it disables | Watch out |
 |------|-----------------|-----------|
-| `Disable-DiagTrack.reg` | Sends usage data to Microsoft | — |
-| `Disable-Connected-User-Telemetry.reg` | Same as above but more complete. Use this one instead of DiagTrack | — |
-| `Disable-DiagnosticPolicy.reg` | Auto troubleshooting (mostly useless) | — |
-| `Disable-WAPPushRouting.reg` | Another Microsoft telemetry channel | — |
-| `Disable-WindowsErrorReporting.reg` | Sends crash reports to Microsoft | — |
+| `Disable-DiagTrack.reg` | Sends usage data to Microsoft | recommended |
+| `Disable-Connected-User-Telemetry.reg` | Same as above but more complete. Use this one instead of DiagTrack | recommended |
+| `Disable-DiagnosticPolicy.reg` | Auto troubleshooting (mostly useless) | recommended |
+| `Disable-WAPPushRouting.reg` | Another Microsoft telemetry channel | recommended |
+| `Disable-WindowsErrorReporting.reg` | Sends crash reports to Microsoft | recommended |
 | `Disable-WindowsInsiderService.reg` | Windows Insider beta program service | Only needed if you are in the Insider Program |
 
 ---
@@ -24,7 +24,7 @@ Double-click any `.reg` file and confirm to apply it. **Create a Restore Point f
 
 | File | What it disables | Watch out |
 |------|-----------------|-----------|
-| `Disable-GameDVR-GameBar.reg` | Background game recording (Win+G overlay) | Skip if you record clips with Xbox Game Bar |
+| `Disable-GameDVR-GameBar.reg` | Background game recording (Win+G overlay) | (recommended) / Skip if you record clips with Xbox Game Bar |
 | `Disable-XboxServices.reg` | Xbox background services | Skip if you use Xbox Game Pass |
 | `Disable-XboxLiveAuthManager.reg` | Xbox Live login service | Skip if you use Xbox Game Pass |
 | `Disable-XboxLiveGameSave.reg` | Xbox cloud save sync | Skip if you use Xbox cloud saves |

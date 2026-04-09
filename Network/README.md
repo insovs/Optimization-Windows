@@ -1,5 +1,4 @@
 # Optimization-Windows / Network
-
 A collection of network tweaks focused on reducing latency, stabilizing ping, and improving overall network responsiveness.
 
 ---
@@ -9,6 +8,7 @@ A collection of network tweaks focused on reducing latency, stabilizing ping, an
 | File | Type | What it does |
 |---|---|---|
 | `ApplyCloudfllareDNS.bat` | .bat | Sets Cloudflare DNS (`1.1.1.1` / `1.0.0.1`) on all active network interfaces and flushes the DNS cache. |
+| `Disable-NetworkPowerSaving.bat` | .bat | Disables all power saving features on all network adapters (EEE, Green Ethernet, Auto Disable Gigabit, Flow Control, etc.). Prevents latency spikes caused by the adapter throttling itself to save power. |
 | `MSI Mode + High Priority Network Adapter.bat` | .bat | Enables MSI (Message Signaled Interrupts) on all PCI network adapters and sets interrupt priority to high (`DevicePriority=3`). |
 | `NetworkThrottlingIndex.reg` | .reg | Sets `NetworkThrottlingIndex=0xFFFFFFFF` — disables Windows multimedia network throttling, preventing the OS from artificially limiting network throughput for non-multimedia apps. |
 | `TCP AckFrequency, NoDelay, DalAckTicks Latency Optimization.bat` | .bat | Applies 3 TCP registry tweaks per adapter to minimize latency. See detail below. |

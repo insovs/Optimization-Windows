@@ -4,7 +4,7 @@ All Xbox-related background services.
 Safe to disable if you do not use Xbox Game Pass, Xbox Live, or Xbox accessories.
 
 > [!NOTE]
-> ⚠️ If you use **Xbox Game Pass** or **Xbox Live**, do not apply any of these.
+> If you use **Xbox Game Pass** or **Xbox Live**, do not apply any of these.
 
 | File | What it disables | Watch out |
 |------|-----------------|-----------|

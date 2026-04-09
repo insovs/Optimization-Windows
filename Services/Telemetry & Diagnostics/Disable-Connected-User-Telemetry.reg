@@ -1,0 +1,16 @@
+Windows Registry Editor Version 5.00
+
+; Disables the "Connected User Experiences and Telemetry" service
+; This service collects and sends diagnostic data to Microsoft.
+; Also combine with disabling in:
+; Settings > Privacy > Diagnostics & Feedback
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DiagTrack]
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection]
+"AllowTelemetry"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection]
+"AllowTelemetry"=dword:00000000
+

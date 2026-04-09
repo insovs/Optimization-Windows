@@ -3,9 +3,6 @@ Windows Registry Editor Version 5.00
 ; Disables Microsoft Compatibility Telemetry (CompatTelRunner).
 ; Known for random CPU spikes in the background. Pure telemetry, no user benefit.
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DiagTrack]
-"Start"=dword:00000004
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AppCompat]
 "AITEnable"=dword:00000000
 "DisableInventory"=dword:00000001

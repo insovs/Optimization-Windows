@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Disable Maps Broker (MapsBroker)
+; Stops Bing Maps background downloads and updates. Useless on a gaming PC.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MapsBroker]
+"Start"=dword:00000004

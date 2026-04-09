@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Disables sync of network shared folders for offline access.
+; Safe if you do not use network drives with offline caching.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CscService]
+"Start"=dword:00000004

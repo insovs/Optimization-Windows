@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Disable Remote Registry (RemoteRegistry)
+; Prevents remote access to the registry. Useless for home users and a security risk.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RemoteRegistry]
+"Start"=dword:00000004

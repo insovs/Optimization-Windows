@@ -23,8 +23,7 @@ Always create a **System Restore Point** before applying any of these keys.
 
 | File | Description |
 |------|-------------|
-| `Disable-GameDVR-GameBar.reg` | Disables Game DVR background recording and Game Bar overlay. Frees GPU/CPU during gaming. 
-⚠️ Do not apply if you use Xbox Game Bar to record clips. |
+| `Disable-GameDVR-GameBar.reg` | Disables Game DVR background recording and Game Bar overlay. Frees GPU/CPU during gaming. ⚠️ Do not apply if you use Xbox Game Bar to record clips. |
 | `Disable-XboxServices.reg` | Disables Xbox-related background services bundle. ⚠️ Do not apply if you use Xbox Game Pass or Xbox Live. |
 | `Disable-XboxLiveAuthManager.reg` | Disables Xbox Live authentication service. ⚠️ Do not apply if you use Xbox Game Pass or Xbox Live sign-in. |
 | `Disable-XboxLiveGameSave.reg` | Disables Xbox Live cloud save sync. ⚠️ Do not apply if you rely on Xbox cloud saves. |

@@ -19,4 +19,3 @@ Each `.reg` file sets the target service to **Disabled**.
 | `Hardware/` | Services useless depending on your hardware setup |
 | `User & Session/` | User account and session related services |
 | `Bluetooth/` | Bluetooth-related tweaks |
-| `Recommended/` | Hand-picked selection of the safest and most impactful tweaks |

@@ -1,0 +1,11 @@
+Windows Registry Editor Version 5.00
+
+; Disables HomeGroup Provider and Listener services.
+; HomeGroup was removed in Windows 10 version 1803 but these
+; services may still run on some systems for no reason.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HomeGroupProvider]
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HomeGroupListener]
+"Start"=dword:00000004

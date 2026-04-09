@@ -1,13 +1,17 @@
-## Telemetry & Diagnostics
-*Services that send data to Microsoft in the background.*
+# Telemetry & Diagnostics
+
+Services that send data to Microsoft in the background.
 
 | File | What it disables | Watch out |
 |------|-----------------|-----------|
-| `Disable-DiagTrack.reg` | Sends usage data to Microsoft | (Recommended) |
-| `Disable-Connected-User-Telemetry.reg` | Same as above but more complete. Use this one instead of DiagTrack | (Recommended) |
-| `Disable-DiagnosticPolicy.reg` | Auto troubleshooting (mostly useless) | (Recommended) |
-| `Disable-WAPPushRouting.reg` | Another Microsoft telemetry channel | (Recommended) |
-| `Disable-WindowsErrorReporting.reg` | Sends crash reports to Microsoft | (Recommended) |
+| `Disable-DiagTrack.reg` | Sends usage data to Microsoft | — |
+| `Disable-Connected-User-Telemetry.reg` | Same as above but more complete. Use this one instead of DiagTrack | — |
+| `Disable-DiagnosticPolicy.reg` | Auto troubleshooting (mostly useless) | — |
+| `Disable-WAPPushRouting.reg` | Another Microsoft telemetry channel | — |
+| `Disable-WindowsErrorReporting.reg` | Sends crash reports to Microsoft | — |
 | `Disable-WindowsInsiderService.reg` | Windows Insider beta program service | Only needed if you are in the Insider Program |
-
----
+| `Disable-CompatTelRunner.reg` | Microsoft Compatibility Telemetry — known for random CPU spikes | — |
+| `Disable-PcaSvc.reg` | Monitors every app you launch to detect compatibility issues | — |
+| `Disable-DiagnosticHub.reg` | Collects performance data for Microsoft | Skip if you use Visual Studio performance profiling |
+| `Disable-OnlineSpeechRecognition.reg` | Sends your voice data to Microsoft servers | Cortana voice features will stop working |
+| `Disable-InkWorkspaceService.reg` | Collects data on how you type and write | Skip if you use a stylus or pen input |

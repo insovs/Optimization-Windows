@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+; Disables Windows Prefetch, Superfetch and boot tracing.
+; On SSD: unnecessary, SSDs are fast enough without it.
+; On HDD: can help boot and app load times — consider keeping it enabled.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters]
+"EnablePrefetcher"=dword:00000000
+"EnableSuperfetch"=dword:00000000
+"EnableBootTrace"=dword:00000000

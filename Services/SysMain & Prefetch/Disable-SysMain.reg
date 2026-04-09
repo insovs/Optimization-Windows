@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+; Disables SysMain (formerly Superfetch).
+; Preloads frequently used apps into RAM to speed up launches.
+; On SSD: useless, wastes RAM and causes background disk I/O.
+; On HDD: can improve app launch times — consider keeping it enabled.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain]
+"Start"=dword:00000004

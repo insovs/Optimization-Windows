@@ -1,7 +1,6 @@
 # Bluetooth
 
 Scripts to fully disable or re-enable all Bluetooth services, adapters, drivers and radio on Windows.
-More complete than a simple `.reg` tweak — this handles everything in one shot.
 
 > [!NOTE]
 > **Make sure you dont use Bluetooth before applying.**

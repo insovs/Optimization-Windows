@@ -16,6 +16,6 @@ If anything feels off, your mouse disconnects on its own or behaves erratically 
 
 ## Which value to choose?
 - Start with **CursorUpdateInterval 0** to test stability
-- If unstable, try **CursorUpdateInterval 1** /2 etc
+- If unstable, try **CursorUpdateInterval 1** or **2** etc.
 
 ---

@@ -6,7 +6,7 @@
 
 > [!WARNING]
 > Always create a backup of your current settings before making any changes.
-> **Incorrectly modifying BIOS parameters can make your system unstable or unbootable. This guide focuses on settings that are generally considered safe — however, if you choose to go further using the PDF documentation, you do so entirely at your own risk. No responsibility will be taken for any issues that may arise.**
+> **Incorrectly modifying BIOS parameters can make your system unstable or unbootable. This guide focuses on settings that are generally considered safe.**
 
 ---
 
@@ -132,7 +132,6 @@ Changes are applied directly to the BIOS. A **reboot** may be required for some 
 | `Export.bat` | Exports all current BIOS settings to a `nvram.txt` file. |
 | `Import.bat` | Applies the changes from `nvram.txt` to the BIOS. |
 | `amiflldrv64.sys` / `amigendrv64.sys` | Drivers required for SceWin to operate. |
-| `AMD BIOS Settings Guide.pdf` | Full reference documentation by @insopti (remastered from @Ancel's original guide) — covers all visible and hidden AMD BIOS settings in detail, including advanced options beyond this README. |
 
 ---
 
@@ -159,4 +158,4 @@ As a last resort, a BIOS reset (motherboard jumper or removing the CMOS battery)
 
 ---
 
-> A video by @Ancel is available presenting the tool and walking through the full procedure.
+> A video [here](https://www.youtube.com/watch?v=jRsaGmptP0E&t=91s) by [@Ancel](https://github.com/ancel1x) is available presenting the tool (SceWin) and walking through the full procedure.

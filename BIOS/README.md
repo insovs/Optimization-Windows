@@ -1,79 +1,87 @@
-# 🔧 Optimisation BIOS via SceWin
+# 🔧 BIOS Optimization via SceWin
 
-> Accédez et modifiez les vos reglages bios inculant ainsi ceux cacher de votre BIOS directement depuis Windows.
+![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D4?style=flat-square&logo=windows)
+![BIOS](https://img.shields.io/badge/BIOS-AMI%20UEFI-green?style=flat-square)
+![Version](https://img.shields.io/badge/SceWin-5.05.01-orange?style=flat-square)
+
+> Access and modify your BIOS settings — including hidden ones — directly from Windows, without rebooting.
 
 ---
 
 > [!WARNING]
-> Créez toujours une sauvegarde de vos réglages actuels avant toute modification.
-> **Modifier les paramètres BIOS incorrectement peut rendre votre système instable ou impossible à démarrer. ici nous allons se concentrer sur plsueiurs reglages surs, donc rien de cela  devrais se passer, cependant si vous souhaitez allez plus loin a laide de la doccumentation pdf, cest a vos risuqe et peril. je ne prends aucunes responsablilter. **
+> Always create a backup of your current settings before making any changes.
+> **Incorrectly modifying BIOS parameters can make your system unstable or unbootable. This guide focuses on settings that are generally considered safe — however, if you choose to go further using the PDF documentation, you do so entirely at your own risk. No responsibility will be taken for any issues that may arise.**
 
 ---
 
-## ⚡ Réglages recommandés pour l'optimisation des performances
+## ⚡ Recommended Settings for Performance Optimization
 
-Ces paramètres sont à désactiver dans le fichier `nvram.txt` pour réduire la latence et gagner en réactivité système.
+These settings should be disabled in the `nvram.txt` file to reduce latency and improve system responsiveness.
 
-| # | Nom du réglage | Valeur cible | Pourquoi ? |
+| # | Setting Name | Target Value | Why? |
 |---|---|---|---|
-| 1 | `Spread Spectrum` | `[00] Disabled` | Module légèrement la fréquence d'horloge pour réduire les interférences électromagnétiques (EMI) — sa désactivation stabilise la fréquence d'horloge et peut réduire la gigue de signal sur certaines configurations. |
-| 2 | `AMD Cool&Quiet function` | `[00] Disabled` | Désactive la gestion dynamique de fréquence CPU d'AMD — maintient le processeur à sa fréquence maximale en permanence et supprime les micro-variations de performances liées aux changements de P-State. |
-| 3 | `Global C-state Control` | `[00] Disabled` | Empêche le CPU d'entrer en états de veille profonde (C1, C6…) — élimine les micro-latences dues au réveil du processeur lors d'un pic de charge soudain. |
-| 4 | `DF C-states` | `[00] Disabled` | L'Infinity Fabric (bus interne AMD reliant le CPU, la mémoire et les cœurs) n'entre plus en basse fréquence au repos — supprime les micro-pics de latence lors des reprises d'activité. |
-| 5 | `Power Down Enable` | `[00] Disabled` | Désactive la mise en veille des banques mémoire inutilisées — réduit la latence RAM et améliore la cohérence des frametimes. |
-| 6 | `Power Supply Idle Control` | `[02] Typical Current Idle` | Réduit les variations de tension lors des transitions de charge — stabilise les performances et les frametimes. |
-| 7 | `ECO Mode` | `[00] Disabled` | Lève la limite de TDP imposée au CPU — laisse le processeur atteindre ses fréquences boost maximales sans restriction de puissance. |
-| 8 | `Bluetooth Controller` | `[00] Disabled` | Désactive le contrôleur Bluetooth intégré — supprime les interruptions et le polling périodique du périphérique, libère des ressources IRQ. À désactiver uniquement si vous n'utilisez pas le Bluetooth. |
+| 1 | `Spread Spectrum` | `[00] Disabled` | Slightly modulates the clock frequency to reduce electromagnetic interference (EMI) — disabling it stabilizes the clock frequency and can reduce signal jitter on some configurations. |
+| 2 | `AMD Cool&Quiet function` | `[00] Disabled` | Disables AMD's dynamic CPU frequency management — keeps the processor at its maximum frequency at all times and eliminates micro-variations in performance caused by P-State transitions. |
+| 3 | `Global C-state Control` | `[00] Disabled` | Prevents the CPU from entering deep sleep states (C1, C6…) — eliminates micro-latencies caused by the processor waking up during sudden load spikes. |
+| 4 | `DF C-states` | `[00] Disabled` | Keeps the Infinity Fabric (AMD's internal bus connecting the CPU, memory, and cores) out of low-frequency idle mode — removes micro-latency spikes when activity resumes. |
+| 5 | `Power Down Enable` | `[00] Disabled` | Disables sleep mode for unused memory banks — reduces RAM latency and improves frametime consistency. |
+| 6 | `Power Supply Idle Control` | `[02] Typical Current Idle` | Reduces voltage fluctuations during load transitions — stabilizes performance and frametimes. |
+| 7 | `ECO Mode` | `[00] Disabled` | Lifts the TDP limit imposed on the CPU — allows the processor to reach its maximum boost frequencies without power restrictions. |
+| 8 | `Bluetooth Controller` | `[00] Disabled` | Disables the onboard Bluetooth controller — removes periodic device polling and interrupts, freeing IRQ resources. Only disable if you don't use Bluetooth. |
 
 > [!NOTE]
-> Ces réglages sont orientés **performance brute et latence minimale** — idéal pour le gaming ou les workstations. Sur un usage bureautique classique, vous pouvez laisser ces options activées : elles économisent de l'énergie et réduisent la chaleur.
+> These settings are oriented toward **raw performance and minimal latency** — ideal for gaming or workstations. For standard office use, leaving these options enabled saves energy and reduces heat.
 
 ---
 
-## 🔬 Réglages avancés
+## 🔬 Advanced Settings
 
 > [!CAUTION]
-> Ces réglages sont plus techniques et leur impact varie selon la carte mère, le CPU et la génération (AM4/AM5). Certains peuvent provoquer une instabilité si votre système est borderline en thermals ou en tension, OC instable. **Appliquez-les un par un**, redémarrez entre chaque, et vérifiez la stabilité avant de continuer.
+> These settings are more technical and their impact varies depending on the motherboard, CPU, and generation (AM4/AM5). Some may cause instability if your system is borderline on thermals, voltage, or has an unstable overclock. **Apply them one at a time**, reboot between each change, and verify stability before continuing.
 
-| # | Nom du réglage | Valeur cible | Impact | Notes |
+| # | Setting Name | Target Value | Impact | Notes |
 |---|---|---|---|---|
-| 1 | `SR-IOV Support` | `[00] Disabled` | ✅ Sûr | Permet à un périphérique PCIe (GPU, carte réseau…) d'être partagé entre plusieurs machines virtuelles. Sans hyperviseur, c'est inutile. |
-| 2 | `Chipset Power Saving Features` | `[00] Disabled` | ✅ Sûr | Désactive la gestion d'énergie du chipset (ASPM, liens PCIe en L1…) — gain marginal sur la latence des communications CPU ↔ chipset. Sans risque d'instabilité notable. |
-| 3 | `TSME` *(Transparent Secure Memory Encryption)* | `[00] Disabled` | ✅ Sûr | Chiffrement transparent de la RAM — désactivé, il retire **5 à 7 ns de latence mémoire** ajoutée. Aucun impact sécurité sur un PC personnel non partagé. |
-| 4 | `Data Scramble` | `[00] Disabled` | ⚠️ Tester | Brouillage des données mémoire pour réduire les interférences électromagnétiques (EMI). Peut améliorer la latence RAM mais peut causer une instabilité avec XMP/EXPO activé sur certains kits. Tester avec soin. |
-| 5 | `IOMMU` | `[00] Disabled` | ⚠️ Tester | Unité de gestion mémoire pour les périphériques DMA — inutile sans virtualisation (VM, WSL2). Sa désactivation réduit les interruptions parasites, mais peut causer des problèmes sur certaines configurations. |
+| 1 | `SR-IOV Support` | `[00] Disabled` | ✅ Safe | Allows a PCIe device (GPU, network card…) to be shared between multiple virtual machines. Without a hypervisor, this is useless. |
+| 2 | `Chipset Power Saving Features` | `[00] Disabled` | ✅ Safe | Disables chipset power management (ASPM, PCIe L1 links…) — marginal gain on CPU ↔ chipset communication latency. No notable stability risk. |
+| 3 | `TSME` *(Transparent Secure Memory Encryption)* | `[00] Disabled` | ✅ Safe | Transparent RAM encryption — disabling it removes **5 to 7 ns of added memory latency**. No security impact on a personal, non-shared PC. |
+| 4 | `Data Scramble` | `[00] Disabled` | ⚠️ Test first | Memory data scrambling used to reduce EMI. Can improve RAM latency but may cause instability with XMP/EXPO enabled on some kits. Test carefully. |
+| 5 | `IOMMU` | `[00] Disabled` | ⚠️ Test first | Memory management unit for DMA devices — unnecessary without virtualization (VM, WSL2). Disabling it reduces parasitic interrupts, but may cause issues on some configurations. |
 
 ---
 
-## 🪜 Procédure
+## 🪜 Step-by-Step Procedure
 
-### 1️⃣ Appliquer la clé de registre
-
-Double-cliquez sur **`SCEWIN_FIX.reg`** et confirmez l'ajout au registre Windows.
-
-> ⚠ Cette étape est **obligatoire en premier**. Sans elle, SceWin ne peut pas accéder au BIOS.
+**Quick overview:** `SCEWIN_FIX.reg` → `Export.bat` → edit `nvram.txt` → `Import.bat`
 
 ---
 
-### 2️⃣ Exporter les paramètres BIOS actuels
+### 1️⃣ Apply the registry key
 
-Faites un **clic droit** sur `Export.bat` → **Exécuter en tant qu'administrateur**.
+Double-click **`SCEWIN_FIX.reg`** and confirm adding it to the Windows registry.
 
-Un fichier **`nvram.txt`** sera créé dans le même dossier — il contient tous les réglages BIOS de votre machine.
-
-> 💡 **Avant de toucher quoi que ce soit**, faites une copie du fichier et renommez-la `nvram_backup.txt`. C'est votre filet de sécurité.
+> ⚠ This step is **mandatory first**. Without it, SceWin cannot access the BIOS.
 
 ---
 
-### 3️⃣ Modifier le fichier nvram.txt
+### 2️⃣ Export current BIOS settings
 
-Ouvrez `nvram.txt` avec un éditeur de texte (Notepad, VS Code, Notepad++…).
+**Right-click** `Export.bat` → **Run as administrator**.
 
-Utilisez `Ctrl+F` pour rechercher le nom du réglage à modifier (ex : `Cool&Quiet`, `C-state`, `ECO Mode`…).
+A **`nvram.txt`** file will be created in the same folder — it contains all your machine's current BIOS settings.
 
-**La règle est simple : le `*` indique l'option active. Déplacez-le sur la valeur souhaitée, c'est tout.**
+> 💡 **Before touching anything**, make a copy of the file and rename it `nvram_backup.txt`. This is your safety net.
 
-Chaque entrée dans le fichier ressemble à ceci :
+---
+
+### 3️⃣ Edit the nvram.txt file
+
+Open `nvram.txt` with a text editor (Notepad, VS Code, Notepad++…).
+
+Use `Ctrl+F` to search for the setting name you want to change (e.g. `Cool&Quiet`, `C-state`, `ECO Mode`…).
+
+**The rule is simple: the `*` marks the active option. Move it to the desired value, that's it.**
+
+Each entry in the file looks like this:
 
 ```
 Setup Question	= AMD Cool&Quiet function
@@ -86,16 +94,16 @@ Options	=*[00]Disabled	// Move "*" to the desired Option
          [01]Enabled
 ```
 
-Dans cet exemple, le `*` est déjà sur `[00]Disabled` → Cool&Quiet est **désactivé** ✅ c'est la valeur qu'on veut.
+In this example, the `*` is already on `[00]Disabled` → Cool&Quiet is **disabled** ✅ which is what we want.
 
-Si au contraire le `*` était sur `[01]Enabled` comme ici :
+If instead the `*` was on `[01]Enabled` like this:
 
 ```
 Options	=[00]Disabled	// Move "*" to the desired Option
          *[01]Enabled
 ```
 
-Il faudrait le déplacer pour obtenir :
+You would move it to get:
 
 ```
 Options	=*[00]Disabled	// Move "*" to the desired Option
@@ -103,50 +111,56 @@ Options	=*[00]Disabled	// Move "*" to the desired Option
 ```
 
 > [!IMPORTANT]
-> Ne modifiez **que la ligne `Options`**. Les champs `Token`, `Offset`, `Width` etc ne doivent **jamais** être changés !
-> Il doit toujours y avoir **un seul `*`** par bloc `Options`. Ni zéro, ni deux.
+> Only modify the **`Options` line**. The `Token`, `Offset`, `Width`, etc. fields must **never** be changed!
+> There must always be **exactly one `*`** per `Options` block. Not zero, not two.
 
 ---
 
-### 4️⃣ Importer les modifications dans le BIOS
+### 4️⃣ Import the changes into the BIOS
 
-Faites un **clic droit** sur `Import.bat` → **Exécuter en tant qu'administrateur**.
+**Right-click** `Import.bat` → **Run as administrator**.
 
-Les modifications sont appliquées directement au BIOS. Un **redémarrage** peut être nécessaire pour que certains changements prennent effet.
+Changes are applied directly to the BIOS. A **reboot** may be required for some changes to take effect.
 
-> ✅ Si l'import se termine sans message d'erreur, vos réglages sont bien appliqués.
-cetaines erreurs sont pas tres importantes, si vous pensez avoir tout fais cela correctement et pas de grosse erreur alors cest que tout vas bien.
+> ✅ If the import completes without any error message, your settings have been applied successfully.
+> Some minor warnings are not critical — if you followed the steps correctly and made no obvious mistakes, everything should be fine.
+
 ---
 
-## 📁 Contenu du dépôt
+## 📁 Repository Contents
 
-| Fichier | Rôle |
+| File | Role |
 |---|---|
-| `SCEWIN_FIX.reg` | ⭐ **À exécuter en premier.** Clé de registre qui permet à SceWin de fonctionner correctement sur les systèmes récents. |
-| `SCEWIN_64.exe` | Outil principal pour lire et écrire les paramètres NVRAM du BIOS. |
-| `Export.bat` | Exporte tous les paramètres BIOS actuels dans un fichier `nvram.txt`. |
-| `Import.bat` | Applique les modifications du fichier `nvram.txt` au BIOS. |
-| `amiflldrv64.sys` / `amigendrv64.sys` | Drivers nécessaires au fonctionnement de SceWin. |
+| `SCEWIN_FIX.reg` | ⭐ **Run this first.** Registry key that allows SceWin to function correctly on recent systems. |
+| `SCEWIN_64.exe` | Main tool for reading and writing BIOS NVRAM parameters. |
+| `Export.bat` | Exports all current BIOS settings to a `nvram.txt` file. |
+| `Import.bat` | Applies the changes from `nvram.txt` to the BIOS. |
+| `amiflldrv64.sys` / `amigendrv64.sys` | Drivers required for SceWin to operate. |
+| `AMD BIOS Settings Guide.pdf` | Full reference documentation by @insopti (remastered from @Ancel's original guide) — covers all visible and hidden AMD BIOS settings in detail, including advanced options beyond this README. |
 
 ---
 
-## ✅ Prérequis
+## ✅ Prerequisites
 
-- Windows 10 ou 11 (64 bits)
-- Carte mère compatible **AMI BIOS (UEFI)**
-- Désactiver temporairement tout antivirus si SceWin est bloqué (faux positif fréquent)
+- Windows 10 or 11 (64-bit)
+- Motherboard with **AMI BIOS (UEFI)**
+- Temporarily disable any antivirus if SceWin is blocked (common false positive)
+
+---
+
+## 🛡 Recovery in Case of Issues
+
+If your system becomes unstable after a change:
+
+1. Run `Export.bat` again to check the current state
+2. Open your **backup** `nvram_backup.txt`
+3. Copy the original values back into `nvram.txt`
+4. Run `Import.bat` as administrator
+
+As a last resort, a BIOS reset (motherboard jumper or removing the CMOS battery) restores factory defaults.
+
+> 🔗 How to reset BIOS by removing the CMOS battery: https://www.youtube.com/watch?v=xey0us9Nyyo
 
 ---
 
-## 🛡 Restauration en cas de problème
-
-Si votre système devient instable après modification :
-
-1. Relancez `Export.bat` pour vérifier l'état actuel
-2. Ouvrez votre **sauvegarde** `nvram_backup.txt`
-3. Copiez les valeurs d'origine dans `nvram.txt`
-4. Relancez `Import.bat` en administrateur
-
-En dernier recours, un reset BIOS (jumper sur la carte mère ou retrait de la pile CMOS) restaure les valeurs d'usine.
-
----
+> A video by @Ancel is available presenting the tool and walking through the full procedure.

@@ -1,8 +1,4 @@
-# 🔧 BIOS Optimization via SceWin
-
-![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D4?style=flat-square&logo=windows)
-![BIOS](https://img.shields.io/badge/BIOS-AMI%20UEFI-green?style=flat-square)
-![Version](https://img.shields.io/badge/SceWin-5.05.01-orange?style=flat-square)
+# 🔧 BIOS Optimization (SceWin)
 
 > Access and modify your BIOS settings — including hidden ones — directly from Windows, without rebooting.
 

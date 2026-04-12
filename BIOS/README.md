@@ -51,79 +51,86 @@ These settings should be disabled in the `nvram.txt` file to reduce latency and 
 
 ## 🪜 Step-by-Step Procedure
 
-> A video [here](https://www.youtube.com/watch?v=jRsaGmptP0E&t=91s) by [@Ancel](https://github.com/ancel1x) is available presenting the tool (SceWin) and walking through the full procedure.
+> [!TIP]
+> **New to this?** Watch [@Ancel's video](https://www.youtube.com/watch?v=jRsaGmptP0E&t=91s) first — it walks through the full procedure with the tool.
+
+**Workflow at a glance:**
+
+```
+SCEWIN_FIX.reg  ──►  Export.bat  ──►  nvram.txt  ──►  Import.bat
+   (Step 1)           (Step 2)         (Step 3)         (Step 4)
+```
 
 ---
 
 ### 1️⃣ Apply the registry key
 
-Double-click **`SCEWIN_FIX.reg`** and confirm adding it to the Windows registry.
+> [!CAUTION]
+> **Do this before anything else.** Without it, SceWin cannot access the BIOS.
 
-> ⚠ This step is **mandatory first**. Without it, SceWin cannot access the BIOS.
-
----
-
-### 2️⃣ Export current BIOS settings
-
-**Right-click** `Export.bat` → **Run as administrator**.
-
-A **`nvram.txt`** file will be created in the same folder — it contains all your machine's current BIOS settings.
-
-> 💡 **Before touching anything**, make a copy of the file and rename it `nvram_backup.txt`. This is your safety net.
+**Double-click `SCEWIN_FIX.reg`** and confirm when Windows asks you to add it to the registry.
 
 ---
 
-### 3️⃣ Edit the nvram.txt file
+### 2️⃣ Export your current BIOS settings
 
-Open `nvram.txt` with a text editor (Notepad, VS Code, Notepad++…).
+**Right-click `Export.bat`** → **Run as administrator**.
 
-Use `Ctrl+F` to search for the setting name you want to change (e.g. `Cool&Quiet`, `C-state`, `ECO Mode`…).
+This generates a **`nvram.txt`** file in the same folder containing every BIOS setting on your machine.
 
-**The rule is simple: the `*` marks the active option. Move it to the desired value, that's it.**
+> [!IMPORTANT]
+> **Immediately make a backup:** copy `nvram.txt` and rename it `nvram_backup.txt` before editing anything.
+> If something goes wrong, this file is how you get back to your original state.
 
-Each entry in the file looks like this:
+---
 
-```
-Setup Question	= AMD Cool&Quiet function
-Help String	= Enable/Disable AMD Cool&Quiet function.
-Token	=27	// Do NOT change this line
-Offset	=14A
-Width	=01
-BIOS Default	=[01]Enabled
-Options	=*[00]Disabled	// Move "*" to the desired Option
-         [01]Enabled
-```
+### 3️⃣ Edit nvram.txt
 
-In this example, the `*` is already on `[00]Disabled` → Cool&Quiet is **disabled** ✅ which is what we want.
+Open `nvram.txt` with any text editor (Notepad, VS Code, Notepad++…) and use `Ctrl+F` to find the setting you want to change.
 
-If instead the `*` was on `[01]Enabled` like this:
+**How it works — one simple rule: the `*` = the currently active option. Move it, nothing else.**
+
+Each setting block looks like this:
 
 ```
-Options	=[00]Disabled	// Move "*" to the desired Option
-         *[01]Enabled
+Setup Question  = AMD Cool&Quiet function
+Help String     = Enable/Disable AMD Cool&Quiet function.
+Token           =27    // Do NOT change this line
+Offset          =14A
+Width           =01
+BIOS Default    =[01]Enabled
+Options         =*[00]Disabled    // Move "*" to the desired Option
+                 [01]Enabled
 ```
 
-You would move it to get:
+Here the `*` is on `[00]Disabled` → Cool&Quiet is **already disabled** ✅
+
+If the `*` is on the wrong option, simply move it:
 
 ```
-Options	=*[00]Disabled	// Move "*" to the desired Option
-         [01]Enabled
+// ❌ Before — setting is Enabled
+Options  =[00]Disabled    // Move "*" to the desired Option
+          *[01]Enabled
+
+// ✅ After — setting is now Disabled
+Options  =*[00]Disabled   // Move "*" to the desired Option
+           [01]Enabled
 ```
 
 > [!IMPORTANT]
-> Only modify the **`Options` line**. The `Token`, `Offset`, `Width`, etc. fields must **never** be changed!
-> There must always be **exactly one `*`** per `Options` block. Not zero, not two.
+> - Only ever touch the **`Options`** line — never `Token`, `Offset`, `Width`, or any other field
+> - There must always be **exactly one `*`** per block — not zero, not two
 
 ---
 
 ### 4️⃣ Import the changes into the BIOS
 
-**Right-click** `Import.bat` → **Run as administrator**.
+**Right-click `Import.bat`** → **Run as administrator**.
 
-Changes are applied directly to the BIOS. A **reboot** may be required for some changes to take effect.
+SceWin writes the changes directly to your BIOS NVRAM. **Reboot** your PC afterward for all changes to take effect.
 
-> ✅ If the import completes without any error message, your settings have been applied successfully.
-> Some minor warnings are not critical — if you followed the steps correctly and made no obvious mistakes, everything should be fine.
+> ✅ No error message = everything applied correctly.
+> Minor warnings during import are generally harmless — as long as you followed the steps above carefully.
 
 ---
 
@@ -160,5 +167,3 @@ If your system becomes unstable after a change:
 As a last resort, a BIOS reset (motherboard jumper or removing the CMOS battery) restores factory defaults.
 
 > 🔗 How to reset BIOS by removing the CMOS battery: https://www.youtube.com/watch?v=xey0us9Nyyo
-
----

@@ -12,7 +12,7 @@ Tweaks the Windows registry value that controls how often the cursor position is
 | `CursorUpdateInterval 1.reg` | Sets interval to 1 — slightly reduced rate |
 | `revert-values (windows default).bat` | Restores Windows default values |
 
-If anything feels off, test a lower value between **0 and 5**, or run `revert-values (windows default).bat`.
+If anything feels off, your mouse disconnects on its own or behaves erratically test a lower value between **0 and 5**, or run `revert-values (windows default).bat`.
 
 ## Which value to choose?
 - Start with **CursorUpdateInterval 0** to test stability

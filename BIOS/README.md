@@ -1,28 +1,16 @@
-# 🔧 Optimisation BIOS via SceWin
+# 🔧 Optimisation BIOS (via SceWin, methode facile et rapide)
 
 ![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D4?style=flat-square&logo=windows)
 ![BIOS](https://img.shields.io/badge/BIOS-AMI%20UEFI-green?style=flat-square)
 ![Version](https://img.shields.io/badge/SceWin-5.05.01-orange?style=flat-square)
 
-> Accédez et modifiez les options **cachées** de votre BIOS directement depuis Windows, sans redémarrage.
+> Accédez et modifiez les options de votre BIOS ainsi que ceux  **cachées** directement depuis Windows, tres facilement et rapidement.
 
 ---
 
 > [!WARNING]
 > **Modifier les paramètres BIOS incorrectement peut rendre votre système instable ou impossible à démarrer.**
 > Créez toujours une sauvegarde de vos réglages actuels avant toute modification. Procédez avec précaution.
-
----
-
-## 📁 Contenu du dépôt
-
-| Fichier | Rôle |
-|---|---|
-| `SCEWIN_FIX.reg` | ⭐ **À exécuter en premier.** Clé de registre qui permet à SceWin de fonctionner correctement sur les systèmes récents. |
-| `SCEWIN_64.exe` | Outil principal pour lire et écrire les paramètres NVRAM du BIOS. |
-| `Export.bat` | Exporte tous les paramètres BIOS actuels dans un fichier `nvram.txt`. |
-| `Import.bat` | Applique les modifications du fichier `nvram.txt` au BIOS. |
-| `amiflldrv64.sys` / `amigendrv64.sys` | Drivers nécessaires au fonctionnement de SceWin. |
 
 ---
 
@@ -105,6 +93,18 @@ Si votre système devient instable après modification :
 4. Relancez `Import.bat` en administrateur
 
 En dernier recours, un reset BIOS (jumper sur la carte mère ou retrait de la pile CMOS) restaure les valeurs d'usine.
+
+---
+
+## 📁 Contenu du dépôt
+
+| Fichier | Rôle |
+|---|---|
+| `SCEWIN_FIX.reg` | ⭐ **À exécuter en premier.** Clé de registre qui permet à SceWin de fonctionner correctement sur les systèmes récents. |
+| `SCEWIN_64.exe` | Outil principal pour lire et écrire les paramètres NVRAM du BIOS. |
+| `Export.bat` | Exporte tous les paramètres BIOS actuels dans un fichier `nvram.txt`. |
+| `Import.bat` | Applique les modifications du fichier `nvram.txt` au BIOS. |
+| `amiflldrv64.sys` / `amigendrv64.sys` | Drivers nécessaires au fonctionnement de SceWin. |
 
 ---
 

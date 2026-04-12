@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+; Disable Power Throttling (a feature that limits CPU performance in the background).
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerThrottling]
+"PowerThrottlingOff"=dword:00000001

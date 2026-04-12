@@ -16,18 +16,20 @@
 
 ## ⚡ Réglages recommandés pour l'optimisation des performances
 
-Ces 5 paramètres sont à désactiver dans le fichier `nvram.txt` pour réduire la latence et gagner en réactivité système.
+Ces paramètres sont à désactiver dans le fichier `nvram.txt` pour réduire la latence et gagner en réactivité système.
 
 | # | Nom du réglage | Valeur cible | Pourquoi ? |
 |---|---|---|---|
-| 1 | `AMD Cool&Quiet function` | `[00] Disabled` | Désactive la gestion automatique de fréquence CPU — maintient le CPU à sa fréquence maximale en permanence. |
-| 2 | `Global C-state Control` | `[00] Disabled` | Empêche le CPU d'entrer en états de veille profonde (C1, C6…) — élimine les micro-latences au réveil. |
-| 3 | `Power Supply Idle Control` | `[02] Typical Current Idle` | Réduit les variations de tension lors des transitions de charge — stabilise les performances. |
-| 4 | `Bluetooth Controller` | `[00] Disabled` | Désactive le contrôleur Bluetooth intégré — supprime les interruptions et le polling périodique du périphérique, libère des ressources IRQ. À désactiver si vous n'utilisez pas le Bluetooth. |
-| 5 | `Onboard HD Audio Controller` | `[00] Disabled` | Désactive le son intégré à la carte mère — supprime un pilote et ses interruptions système. À désactiver uniquement si vous utilisez une carte son dédiée ou un DAC externe. |
+| 1 | `AMD Cool&Quiet function` | `[00] Disabled` | Désactive la gestion dynamique de fréquence CPU d'AMD — maintient le processeur à sa fréquence maximale en permanence et supprime les micro-variations de performances liées aux changements de P-State. |
+| 2 | `Global C-state Control` | `[00] Disabled` | Empêche le CPU d'entrer en états de veille profonde (C1, C6…) — élimine les micro-latences dues au réveil du processeur lors d'un pic de charge soudain. |
+| 3 | `DF C-states` | `[00] Disabled` | L'Infinity Fabric (bus interne AMD reliant le CPU, la mémoire et les cœurs) n'entre plus en basse fréquence au repos — supprime les micro-pics de latence lors des reprises d'activité. |
+| 4 | `Power Down Enable` | `[00] Disabled` | Désactive la mise en veille des banques mémoire inutilisées — réduit la latence RAM et améliore la cohérence des frametimes. |
+| 5 | `Power Supply Idle Control` | `[02] Typical Current Idle` | Réduit les variations de tension lors des transitions de charge — stabilise les performances et les frametimes. |
+| 6 | `ECO Mode` | `[00] Disabled` | Lève la limite de TDP imposée au CPU — laisse le processeur atteindre ses fréquences boost maximales sans restriction de puissance. |
+| 7 | `Bluetooth Controller` | `[00] Disabled` | Désactive le contrôleur Bluetooth intégré — supprime les interruptions et le polling périodique du périphérique, libère des ressources IRQ. À désactiver uniquement si vous n'utilisez pas le Bluetooth. |
 
 > [!NOTE]
-> Ces réglages sont orientés **performance brute et latence minimale** — idéal pour le gaming ou les workstations. Sur un usage bureautique classique, laisser ces options activées économise de l'énergie et réduit la chaleur.
+> Ces réglages sont orientés **performance brute et latence minimale** — idéal pour le gaming ou les workstations. Sur un usage bureautique classique, vous pouvez laisser ces options activées : elles économisent de l'énergie et réduisent la chaleur.
 
 ---
 
@@ -38,11 +40,11 @@ Ces 5 paramètres sont à désactiver dans le fichier `nvram.txt` pour réduire 
 
 | # | Nom du réglage | Valeur cible | Impact | Notes |
 |---|---|---|---|---|
-| 1 | `Power Down Enable` | `[00] Disabled` | ✅ Sûr | Désactive la mise en veille des banques mémoire inutilisées — réduit la latence RAM et améliore la cohérence des frametimes. |
-| 2 | `DF C-states` | `[00] Disabled` | ✅ Sûr | L'Infinity Fabric (bus interne AMD) n'entre plus en basse fréquence au repos — supprime les micro-pics de latence lors des reprises d'activité. |
-| 3 | `TSME` *(Transparent Secure Memory Encryption)* | `[00] Disabled` | ✅ Sûr | Chiffrement transparent de la RAM — désactivé, il retire **5 à 7 ns de latence mémoire** ajoutée. Aucun impact sécurité sur un PC personnel. |
-| 4 | `IOMMU` | `[00] Disabled` | ✅ Sûr | Unité de gestion mémoire pour les périphériques DMA — inutile sans virtualisation (VM, WSL2). Sa désactivation réduit les interruptions parasites. |
-| 5 | `Data Scramble` | `[00] Disabled` | ⚠️ Tester | Brouillage des données mémoire pour réduire les EMI. Peut améliorer la latence RAM mais peut causer une instabilité avec XMP/EXPO activé sur certains kits. Tester avec soin. |
+| 1 | `TSME` *(Transparent Secure Memory Encryption)* | `[00] Disabled` | ✅ Sûr | Chiffrement transparent de la RAM — désactivé, il retire **5 à 7 ns de latence mémoire** ajoutée. Aucun impact sécurité sur un PC personnel non partagé. |
+| 2 | `IOMMU` | `[00] Disabled` | ✅ Sûr | Unité de gestion mémoire pour les périphériques DMA — inutile sans virtualisation (VM, WSL2). Sa désactivation réduit les interruptions parasites. |
+| 3 | `SR-IOV Support` | `[00] Disabled` | ✅ Sûr | Permet à un périphérique PCIe (GPU, carte réseau…) d'être partagé entre plusieurs machines virtuelles. Sans hyperviseur, c'est inutile. Cohérent avec la désactivation de l'IOMMU. |
+| 4 | `Chipset Power Saving Features` | `[00] Disabled` | ✅ Sûr | Désactive la gestion d'énergie du chipset (ASPM, liens PCIe en L1…) — gain marginal sur la latence des communications CPU ↔ chipset. Sans risque d'instabilité notable. |
+| 5 | `Data Scramble` | `[00] Disabled` | ⚠️ Tester | Brouillage des données mémoire pour réduire les interférences électromagnétiques (EMI). Peut améliorer la latence RAM mais peut causer une instabilité avec XMP/EXPO activé sur certains kits. Tester avec soin. |
 | 6 | `APBDIS` | `[01]` (valeur `1`) | ⚠️ Tester | Force le P-State 0 de l'Infinity Fabric en permanence — fréquence IF fixe, zéro transition. Gain de cohérence sur les accès mémoire. Pas présent sur tous les BIOS. |
 
 ### 🟡 Cas particulier — Spread Spectrum
@@ -87,7 +89,7 @@ Un fichier **`nvram.txt`** sera créé dans le même dossier — il contient tou
 
 Ouvrez `nvram.txt` avec un éditeur de texte (Notepad, VS Code, Notepad++…).
 
-Utilisez `Ctrl+F` pour rechercher le nom du réglage à modifier (ex: `Cool&Quiet`, `C-state`, `CPPC`…).
+Utilisez `Ctrl+F` pour rechercher le nom du réglage à modifier (ex : `Cool&Quiet`, `C-state`, `ECO Mode`…).
 
 **La règle est simple : le `*` indique l'option active. Déplacez-le sur la valeur souhaitée, c'est tout.**
 
@@ -172,6 +174,6 @@ En dernier recours, un reset BIOS (jumper sur la carte mère ou retrait de la pi
 
 ## ⚠ Avertissement légal
 
-Ce projet utilise **SceWin**, un outil tiers développé indépendamment.  
-L'auteur de ce dépôt n'est pas affilié aux fabricants de cartes mères ni à AMI.  
+Ce projet utilise **SceWin**, un outil tiers développé indépendamment.
+L'auteur de ce dépôt n'est pas affilié aux fabricants de cartes mères ni à AMI.
 Toute modification est effectuée **à vos risques et périls**.

@@ -1,4 +1,8 @@
-# 🔧 BIOS Optimization AMD & Intel (SceWin)
+# 🔧 BIOS Optimization via SceWin
+
+![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D4?style=flat-square&logo=windows)
+![BIOS](https://img.shields.io/badge/BIOS-AMI%20UEFI-green?style=flat-square)
+![Version](https://img.shields.io/badge/SceWin-5.05.01-orange?style=flat-square)
 
 > Access and modify your BIOS settings — including hidden ones — directly from Windows, without rebooting.
 
@@ -6,7 +10,7 @@
 
 > [!WARNING]
 > Always create a backup of your current settings before making any changes.
-> **Incorrectly modifying BIOS parameters can make your system unstable or unbootable. This guide focuses on settings that are generally considered safe.**
+> **Incorrectly modifying BIOS parameters can make your system unstable or unbootable. This guide focuses on settings that are generally considered safe — however, if you choose to go further using the PDF documentation, you do so entirely at your own risk. No responsibility will be taken for any issues that may arise.**
 
 ---
 
@@ -46,7 +50,9 @@ These settings should be disabled in the `nvram.txt` file to reduce latency and 
 ---
 
 ## 🪜 Step-by-Step Procedure
+
 > A video [here](https://www.youtube.com/watch?v=jRsaGmptP0E&t=91s) by [@Ancel](https://github.com/ancel1x) is available presenting the tool (SceWin) and walking through the full procedure.
+
 ---
 
 ### 1️⃣ Apply the registry key
@@ -130,6 +136,7 @@ Changes are applied directly to the BIOS. A **reboot** may be required for some 
 | `Export.bat` | Exports all current BIOS settings to a `nvram.txt` file. |
 | `Import.bat` | Applies the changes from `nvram.txt` to the BIOS. |
 | `amiflldrv64.sys` / `amigendrv64.sys` | Drivers required for SceWin to operate. |
+| `AMD BIOS Settings Guide.pdf` | Full reference documentation by @insopti (remastered from @Ancel's original guide) — covers all visible and hidden AMD BIOS settings in detail, including advanced options beyond this README. |
 
 ---
 

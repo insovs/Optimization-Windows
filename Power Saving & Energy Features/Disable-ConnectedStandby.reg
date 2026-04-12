@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+; CsEnabled (Connected Standby / Modern Standby)
+; Connected Standby is a sleep mode where Windows remains partially
+; active to maintain network connections, synchronize data
+; and receive notifications even when the screen is off (like a smartphone).
+
+; This generates regular wake-ups, increased power consumption, and CPU spikes.
+; Disabling this key forces Windows to use classic S3 sleep,
+; a deeper sleep mode, with no background network activity during sleep.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
+"CsEnabled"=dword:00000000

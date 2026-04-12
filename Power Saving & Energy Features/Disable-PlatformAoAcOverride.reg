@@ -1,0 +1,11 @@
+Windows Registry Editor Version 5.00
+
+; PlatformAoAcOverride
+; By default, Windows enables an "Always-on Always-connected" (AoAc) mode
+; which keeps certain components constantly active to receive
+; network notifications, emails, background updates, etc.
+; Disabling this key prevents Windows from forcing this mode and reduces
+; ​​unnecessary system wake-ups, thus decreasing power consumption and interruptions.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
+"PlatformAoAcOverride"=dword:00000000

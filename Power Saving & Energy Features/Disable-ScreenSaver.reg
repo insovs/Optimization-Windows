@@ -1,0 +1,11 @@
+Windows Registry Editor Version 5.00
+
+; Disables the screensaver and activation timeout
+; ScreenSaveActive: Disables the screensaver
+; ScreenSaveTimeOut: Sets the timeout to 0
+; SCRNSAVE.EXE: No screensaver set
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"ScreenSaveActive"="0"
+"ScreenSaveTimeOut"="0"
+"SCRNSAVE.EXE"=""

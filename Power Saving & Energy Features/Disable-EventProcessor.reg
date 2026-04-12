@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Disable the Windows energy event processor.
+; Reduces interruptions related to energy monitoring.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
+"EventProcessorEnabled"=dword:00000000

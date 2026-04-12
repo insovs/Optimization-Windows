@@ -1,12 +1,12 @@
 # 🔧 Optimisation BIOS via SceWin
 
-> Accédez et modifiez les options **cachées** de votre BIOS directement depuis Windows, sans redémarrage.
+> Accédez et modifiez les vos reglages bios inculant ainsi ceux cacher de votre BIOS directement depuis Windows.
 
 ---
 
 > [!WARNING]
-> **Modifier les paramètres BIOS incorrectement peut rendre votre système instable ou impossible à démarrer.**
-> Créez toujours une sauvegarde de vos réglages actuels avant toute modification. Procédez avec précaution.
+> Créez toujours une sauvegarde de vos réglages actuels avant toute modification.
+> **Modifier les paramètres BIOS incorrectement peut rendre votre système instable ou impossible à démarrer. ici nous allons se concentrer sur plsueiurs reglages surs, donc rien de cela  devrais se passer, cependant si vous souhaitez allez plus loin a laide de la doccumentation pdf, cest a vos risuqe et peril. je ne prends aucunes responsablilter. **
 
 ---
 
@@ -45,11 +45,7 @@ Ces paramètres sont à désactiver dans le fichier `nvram.txt` pour réduire la
 
 ---
 
-## 🪜 Procédure complète — étape par étape
-
-**Vue d'ensemble rapide :** `SCEWIN_FIX.reg` → `Export.bat` → modifier `nvram.txt` → `Import.bat`
-
----
+## 🪜 Procédure
 
 ### 1️⃣ Appliquer la clé de registre
 
@@ -107,7 +103,7 @@ Options	=*[00]Disabled	// Move "*" to the desired Option
 ```
 
 > [!IMPORTANT]
-> Ne modifiez **que la ligne `Options`**. Les champs `Token`, `Offset`, `Width` ne doivent **jamais** être changés.
+> Ne modifiez **que la ligne `Options`**. Les champs `Token`, `Offset`, `Width` etc ne doivent **jamais** être changés !
 > Il doit toujours y avoir **un seul `*`** par bloc `Options`. Ni zéro, ni deux.
 
 ---
@@ -119,7 +115,7 @@ Faites un **clic droit** sur `Import.bat` → **Exécuter en tant qu'administrat
 Les modifications sont appliquées directement au BIOS. Un **redémarrage** peut être nécessaire pour que certains changements prennent effet.
 
 > ✅ Si l'import se termine sans message d'erreur, vos réglages sont bien appliqués.
-
+cetaines erreurs sont pas tres importantes, si vous pensez avoir tout fais cela correctement et pas de grosse erreur alors cest que tout vas bien.
 ---
 
 ## 📁 Contenu du dépôt

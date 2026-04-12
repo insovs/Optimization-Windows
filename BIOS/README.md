@@ -1,4 +1,4 @@
-# 🔧 BIOS Optimization (SceWin)
+# 🔧 BIOS Optimization AMD & Intel (SceWin)
 
 > Access and modify your BIOS settings — including hidden ones — directly from Windows, without rebooting.
 

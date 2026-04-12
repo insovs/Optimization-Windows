@@ -1,0 +1,11 @@
+Windows Registry Editor Version 5.00
+
+; Energy Estimation Enabled
+; Windows continuously performs energy estimation calculations
+; to display the remaining battery and adapter capacity
+; dynamically monitor performance. On a desktop PC, these calculations are unnecessary
+; and consume CPU resources in the background on a regular basis.
+; Disabling thi eliminates these unnecessary periodic calculations.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
+"EnergyEstimationEnabled"=dword:00000000

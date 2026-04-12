@@ -9,7 +9,7 @@ Tweaks the Windows registry value that controls how often the cursor position is
 ## Files
 | File | Description |
 |---|---|
-| `CursorUpdateInterval 0.reg` | Sets interval to 0 — maximum update rate (Better)|
+| `CursorUpdateInterval 0.reg` (Better) | Sets interval to 0 — maximum update rate|
 | `CursorUpdateInterval 1.reg` | Sets interval to 1 — slightly reduced rate |
 | `revert-values (windows default).bat` | Restores Windows default values |
 

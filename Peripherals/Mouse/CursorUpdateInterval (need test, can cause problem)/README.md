@@ -1,5 +1,3 @@
----
-
 # CursorUpdateInterval
 
 Tweaks the Windows registry value that controls how often the cursor position is updated. This improves mouse responsiveness and reduces input latency.

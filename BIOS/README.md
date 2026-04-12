@@ -1,5 +1,8 @@
 # 🔧 Optimisation BIOS via SceWin
+
 ![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D4?style=flat-square&logo=windows)
+![BIOS](https://img.shields.io/badge/BIOS-AMI%20UEFI-green?style=flat-square)
+![Version](https://img.shields.io/badge/SceWin-5.05.01-orange?style=flat-square)
 
 > Accédez et modifiez les options **cachées** de votre BIOS directement depuis Windows, sans redémarrage.
 
@@ -20,11 +23,39 @@ Ces 5 paramètres sont à désactiver dans le fichier `nvram.txt` pour réduire 
 | 1 | `AMD Cool&Quiet function` | `[00] Disabled` | Désactive la gestion automatique de fréquence CPU — maintient le CPU à sa fréquence maximale en permanence. |
 | 2 | `Global C-state Control` | `[00] Disabled` | Empêche le CPU d'entrer en états de veille profonde (C1, C6…) — élimine les micro-latences au réveil. |
 | 3 | `Power Supply Idle Control` | `[02] Typical Current Idle` | Réduit les variations de tension lors des transitions de charge — stabilise les performances. |
-| 4 | `CPPC` *(Collaborative Processor Performance Control)* | `[00] Disabled` | Désactive la gestion dynamique des performances pilotée par l'OS — comportement plus prévisible et constant. |
-| 5 | `CPPC Preferred Cores` | `[00] Disabled` | Empêche Windows de favoriser certains cœurs CPU — charge répartie uniforme sur tous les cœurs. |
+| 4 | `Bluetooth Controller` | `[00] Disabled` | Désactive le contrôleur Bluetooth intégré — supprime les interruptions et le polling périodique du périphérique, libère des ressources IRQ. À désactiver si vous n'utilisez pas le Bluetooth. |
+| 5 | `Onboard HD Audio Controller` | `[00] Disabled` | Désactive le son intégré à la carte mère — supprime un pilote et ses interruptions système. À désactiver uniquement si vous utilisez une carte son dédiée ou un DAC externe. |
 
 > [!NOTE]
 > Ces réglages sont orientés **performance brute et latence minimale** — idéal pour le gaming ou les workstations. Sur un usage bureautique classique, laisser ces options activées économise de l'énergie et réduit la chaleur.
+
+---
+
+## 🔬 Réglages avancés — pour aller plus loin
+
+> [!CAUTION]
+> Ces réglages sont plus techniques et leur impact varie selon la carte mère, le CPU et la génération (AM4/AM5). Certains peuvent provoquer une instabilité si votre système est borderline en thermals ou en tension. **Appliquez-les un par un**, redémarrez entre chaque, et vérifiez la stabilité avant de continuer.
+
+| # | Nom du réglage | Valeur cible | Impact | Notes |
+|---|---|---|---|---|
+| 1 | `Power Down Enable` | `[00] Disabled` | ✅ Sûr | Désactive la mise en veille des banques mémoire inutilisées — réduit la latence RAM et améliore la cohérence des frametimes. |
+| 2 | `DF C-states` | `[00] Disabled` | ✅ Sûr | L'Infinity Fabric (bus interne AMD) n'entre plus en basse fréquence au repos — supprime les micro-pics de latence lors des reprises d'activité. |
+| 3 | `TSME` *(Transparent Secure Memory Encryption)* | `[00] Disabled` | ✅ Sûr | Chiffrement transparent de la RAM — désactivé, il retire **5 à 7 ns de latence mémoire** ajoutée. Aucun impact sécurité sur un PC personnel. |
+| 4 | `IOMMU` | `[00] Disabled` | ✅ Sûr | Unité de gestion mémoire pour les périphériques DMA — inutile sans virtualisation (VM, WSL2). Sa désactivation réduit les interruptions parasites. |
+| 5 | `Data Scramble` | `[00] Disabled` | ⚠️ Tester | Brouillage des données mémoire pour réduire les EMI. Peut améliorer la latence RAM mais peut causer une instabilité avec XMP/EXPO activé sur certains kits. Tester avec soin. |
+| 6 | `APBDIS` | `[01]` (valeur `1`) | ⚠️ Tester | Force le P-State 0 de l'Infinity Fabric en permanence — fréquence IF fixe, zéro transition. Gain de cohérence sur les accès mémoire. Pas présent sur tous les BIOS. |
+
+### 🟡 Cas particulier — Spread Spectrum
+
+> [!WARNING]
+> **Ne désactivez pas le Spread Spectrum sans raison valable.** Contrairement à ce que beaucoup de guides affirment, ce réglage ne réduit pas la latence gaming sur un système stock. Le Spread Spectrum module légèrement la fréquence d'horloge pour réduire les interférences électromagnétiques (EMI) — le désactiver peut au contraire **augmenter les EMI**, dégrader l'intégrité du signal et rendre le système moins stable.
+>
+> **La seule situation où le désactiver est utile :** vous faites un overclocking manuel du BCLK et vous voulez verrouiller votre fréquence de base à exactement 100.00 MHz. Sur un système sans OC BCLK, laissez-le tel quel.
+
+| Réglage | Recommandation |
+|---|---|
+| `Spread Spectrum Control` | ⛔ Ne pas toucher sauf OC BCLK manuel |
+| `PCIe Spread Spectrum` | ⛔ Ne pas toucher sauf OC BCLK manuel |
 
 ---
 

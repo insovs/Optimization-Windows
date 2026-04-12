@@ -47,8 +47,6 @@ These settings should be disabled in the `nvram.txt` file to reduce latency and 
 
 ## 🪜 Step-by-Step Procedure
 > A video [here](https://www.youtube.com/watch?v=jRsaGmptP0E&t=91s) by [@Ancel](https://github.com/ancel1x) is available presenting the tool (SceWin) and walking through the full procedure.
-**Quick overview:** `SCEWIN_FIX.reg` → `Export.bat` → edit `nvram.txt` → `Import.bat`
-
 ---
 
 ### 1️⃣ Apply the registry key

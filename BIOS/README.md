@@ -20,23 +20,24 @@ Ces paramètres sont à désactiver dans le fichier `nvram.txt` pour réduire la
 
 | # | Nom du réglage | Valeur cible | Pourquoi ? |
 |---|---|---|---|
-| 1 | `AMD Cool&Quiet function` | `[00] Disabled` | Désactive la gestion dynamique de fréquence CPU d'AMD — maintient le processeur à sa fréquence maximale en permanence et supprime les micro-variations de performances liées aux changements de P-State. |
-| 2 | `Global C-state Control` | `[00] Disabled` | Empêche le CPU d'entrer en états de veille profonde (C1, C6…) — élimine les micro-latences dues au réveil du processeur lors d'un pic de charge soudain. |
-| 3 | `DF C-states` | `[00] Disabled` | L'Infinity Fabric (bus interne AMD reliant le CPU, la mémoire et les cœurs) n'entre plus en basse fréquence au repos — supprime les micro-pics de latence lors des reprises d'activité. |
-| 4 | `Power Down Enable` | `[00] Disabled` | Désactive la mise en veille des banques mémoire inutilisées — réduit la latence RAM et améliore la cohérence des frametimes. |
-| 5 | `Power Supply Idle Control` | `[02] Typical Current Idle` | Réduit les variations de tension lors des transitions de charge — stabilise les performances et les frametimes. |
-| 6 | `ECO Mode` | `[00] Disabled` | Lève la limite de TDP imposée au CPU — laisse le processeur atteindre ses fréquences boost maximales sans restriction de puissance. |
-| 7 | `Bluetooth Controller` | `[00] Disabled` | Désactive le contrôleur Bluetooth intégré — supprime les interruptions et le polling périodique du périphérique, libère des ressources IRQ. À désactiver uniquement si vous n'utilisez pas le Bluetooth. |
+| 1 | `Spread Spectrum` | `[00] Disabled` | Module légèrement la fréquence d'horloge pour réduire les interférences électromagnétiques (EMI) — sa désactivation stabilise la fréquence d'horloge et peut réduire la gigue de signal sur certaines configurations. |
+| 2 | `AMD Cool&Quiet function` | `[00] Disabled` | Désactive la gestion dynamique de fréquence CPU d'AMD — maintient le processeur à sa fréquence maximale en permanence et supprime les micro-variations de performances liées aux changements de P-State. |
+| 3 | `Global C-state Control` | `[00] Disabled` | Empêche le CPU d'entrer en états de veille profonde (C1, C6…) — élimine les micro-latences dues au réveil du processeur lors d'un pic de charge soudain. |
+| 4 | `DF C-states` | `[00] Disabled` | L'Infinity Fabric (bus interne AMD reliant le CPU, la mémoire et les cœurs) n'entre plus en basse fréquence au repos — supprime les micro-pics de latence lors des reprises d'activité. |
+| 5 | `Power Down Enable` | `[00] Disabled` | Désactive la mise en veille des banques mémoire inutilisées — réduit la latence RAM et améliore la cohérence des frametimes. |
+| 6 | `Power Supply Idle Control` | `[02] Typical Current Idle` | Réduit les variations de tension lors des transitions de charge — stabilise les performances et les frametimes. |
+| 7 | `ECO Mode` | `[00] Disabled` | Lève la limite de TDP imposée au CPU — laisse le processeur atteindre ses fréquences boost maximales sans restriction de puissance. |
+| 8 | `Bluetooth Controller` | `[00] Disabled` | Désactive le contrôleur Bluetooth intégré — supprime les interruptions et le polling périodique du périphérique, libère des ressources IRQ. À désactiver uniquement si vous n'utilisez pas le Bluetooth. |
 
 > [!NOTE]
 > Ces réglages sont orientés **performance brute et latence minimale** — idéal pour le gaming ou les workstations. Sur un usage bureautique classique, vous pouvez laisser ces options activées : elles économisent de l'énergie et réduisent la chaleur.
 
 ---
 
-## 🔬 Réglages avancés — pour aller plus loin
+## 🔬 Réglages avancés
 
 > [!CAUTION]
-> Ces réglages sont plus techniques et leur impact varie selon la carte mère, le CPU et la génération (AM4/AM5). Certains peuvent provoquer une instabilité si votre système est borderline en thermals ou en tension. **Appliquez-les un par un**, redémarrez entre chaque, et vérifiez la stabilité avant de continuer.
+> Ces réglages sont plus techniques et leur impact varie selon la carte mère, le CPU et la génération (AM4/AM5). Certains peuvent provoquer une instabilité si votre système est borderline en thermals ou en tension, OC instable. **Appliquez-les un par un**, redémarrez entre chaque, et vérifiez la stabilité avant de continuer.
 
 | # | Nom du réglage | Valeur cible | Impact | Notes |
 |---|---|---|---|---|
@@ -44,19 +45,7 @@ Ces paramètres sont à désactiver dans le fichier `nvram.txt` pour réduire la
 | 2 | `Chipset Power Saving Features` | `[00] Disabled` | ✅ Sûr | Désactive la gestion d'énergie du chipset (ASPM, liens PCIe en L1…) — gain marginal sur la latence des communications CPU ↔ chipset. Sans risque d'instabilité notable. |
 | 3 | `TSME` *(Transparent Secure Memory Encryption)* | `[00] Disabled` | ✅ Sûr | Chiffrement transparent de la RAM — désactivé, il retire **5 à 7 ns de latence mémoire** ajoutée. Aucun impact sécurité sur un PC personnel non partagé. |
 | 4 | `Data Scramble` | `[00] Disabled` | ⚠️ Tester | Brouillage des données mémoire pour réduire les interférences électromagnétiques (EMI). Peut améliorer la latence RAM mais peut causer une instabilité avec XMP/EXPO activé sur certains kits. Tester avec soin. |
-| 5 | `IOMMU` | `[00] Disabled` | ⚠️ Tester | Unité de gestion mémoire pour les périphériques DMA — inutile sans virtualisation (VM, WSL2). Sa désactivation réduit les interruptions parasites. |
-
-### 🟡 Cas particulier — Spread Spectrum
-
-> [!WARNING]
-> **Ne désactivez pas le Spread Spectrum sans raison valable.** Contrairement à ce que beaucoup de guides affirment, ce réglage ne réduit pas la latence gaming sur un système stock. Le Spread Spectrum module légèrement la fréquence d'horloge pour réduire les interférences électromagnétiques (EMI) — le désactiver peut au contraire **augmenter les EMI**, dégrader l'intégrité du signal et rendre le système moins stable.
->
-> **La seule situation où le désactiver est utile :** vous faites un overclocking manuel du BCLK et vous voulez verrouiller votre fréquence de base à exactement 100.00 MHz. Sur un système sans OC BCLK, laissez-le tel quel.
-
-| Réglage | Recommandation |
-|---|---|
-| `Spread Spectrum Control` | ⛔ Ne pas toucher sauf OC BCLK manuel |
-| `PCIe Spread Spectrum` | ⛔ Ne pas toucher sauf OC BCLK manuel |
+| 5 | `IOMMU` | `[00] Disabled` | ⚠️ Tester | Unité de gestion mémoire pour les périphériques DMA — inutile sans virtualisation (VM, WSL2). Sa désactivation réduit les interruptions parasites, mais peut causer des problèmes sur certaines configurations. |
 
 ---
 
@@ -152,9 +141,8 @@ Les modifications sont appliquées directement au BIOS. Un **redémarrage** peut
 ## ✅ Prérequis
 
 - Windows 10 ou 11 (64 bits)
-- Droits **administrateur**
 - Carte mère compatible **AMI BIOS (UEFI)**
-- Désactiver temporairement l'antivirus si SceWin est bloqué (faux positif fréquent)
+- Désactiver temporairement tout antivirus si SceWin est bloqué (faux positif fréquent)
 
 ---
 
@@ -170,9 +158,3 @@ Si votre système devient instable après modification :
 En dernier recours, un reset BIOS (jumper sur la carte mère ou retrait de la pile CMOS) restaure les valeurs d'usine.
 
 ---
-
-## ⚠ Avertissement légal
-
-Ce projet utilise **SceWin**, un outil tiers développé indépendamment.
-L'auteur de ce dépôt n'est pas affilié aux fabricants de cartes mères ni à AMI.
-Toute modification est effectuée **à vos risques et périls**.

@@ -14,6 +14,100 @@
 
 ---
 
+## ⚡ Réglages recommandés pour l'optimisation des performances
+
+Ces 5 paramètres sont à désactiver dans le fichier `nvram.txt` pour réduire la latence et gagner en réactivité système.
+
+| # | Nom du réglage | Valeur cible | Pourquoi ? |
+|---|---|---|---|
+| 1 | `AMD Cool&Quiet function` | `[00] Disabled` | Désactive la gestion automatique de fréquence CPU — maintient le CPU à sa fréquence maximale en permanence. |
+| 2 | `Global C-state Control` | `[00] Disabled` | Empêche le CPU d'entrer en états de veille profonde (C1, C6…) — élimine les micro-latences au réveil. |
+| 3 | `Power Supply Idle Control` | `[02] Typical Current Idle` | Réduit les variations de tension lors des transitions de charge — stabilise les performances. |
+| 4 | `CPPC` *(Collaborative Processor Performance Control)* | `[00] Disabled` | Désactive la gestion dynamique des performances pilotée par l'OS — comportement plus prévisible et constant. |
+| 5 | `CPPC Preferred Cores` | `[00] Disabled` | Empêche Windows de favoriser certains cœurs CPU — charge répartie uniforme sur tous les cœurs. |
+
+> [!NOTE]
+> Ces réglages sont orientés **performance brute et latence minimale** — idéal pour le gaming ou les workstations. Sur un usage bureautique classique, laisser ces options activées économise de l'énergie et réduit la chaleur.
+
+---
+
+## 🪜 Procédure complète — étape par étape
+
+**Vue d'ensemble rapide :** `SCEWIN_FIX.reg` → `Export.bat` → modifier `nvram.txt` → `Import.bat`
+
+---
+
+### 1️⃣ Appliquer la clé de registre
+
+Double-cliquez sur **`SCEWIN_FIX.reg`** et confirmez l'ajout au registre Windows.
+
+> ⚠ Cette étape est **obligatoire en premier**. Sans elle, SceWin ne peut pas accéder au BIOS.
+
+---
+
+### 2️⃣ Exporter les paramètres BIOS actuels
+
+Faites un **clic droit** sur `Export.bat` → **Exécuter en tant qu'administrateur**.
+
+Un fichier **`nvram.txt`** sera créé dans le même dossier — il contient tous les réglages BIOS de votre machine.
+
+> 💡 **Avant de toucher quoi que ce soit**, faites une copie du fichier et renommez-la `nvram_backup.txt`. C'est votre filet de sécurité.
+
+---
+
+### 3️⃣ Modifier le fichier nvram.txt
+
+Ouvrez `nvram.txt` avec un éditeur de texte (Notepad, VS Code, Notepad++…).
+
+Utilisez `Ctrl+F` pour rechercher le nom du réglage à modifier (ex: `Cool&Quiet`, `C-state`, `CPPC`…).
+
+**La règle est simple : le `*` indique l'option active. Déplacez-le sur la valeur souhaitée, c'est tout.**
+
+Chaque entrée dans le fichier ressemble à ceci :
+
+```
+Setup Question	= AMD Cool&Quiet function
+Help String	= Enable/Disable AMD Cool&Quiet function.
+Token	=27	// Do NOT change this line
+Offset	=14A
+Width	=01
+BIOS Default	=[01]Enabled
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+```
+
+Dans cet exemple, le `*` est déjà sur `[00]Disabled` → Cool&Quiet est **désactivé** ✅ c'est la valeur qu'on veut.
+
+Si au contraire le `*` était sur `[01]Enabled` comme ici :
+
+```
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+```
+
+Il faudrait le déplacer pour obtenir :
+
+```
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+```
+
+> [!IMPORTANT]
+> Ne modifiez **que la ligne `Options`**. Les champs `Token`, `Offset`, `Width` ne doivent **jamais** être changés.
+> Il doit toujours y avoir **un seul `*`** par bloc `Options`. Ni zéro, ni deux.
+
+---
+
+### 4️⃣ Importer les modifications dans le BIOS
+
+Faites un **clic droit** sur `Import.bat` → **Exécuter en tant qu'administrateur**.
+
+Les modifications sont appliquées directement au BIOS. Un **redémarrage** peut être nécessaire pour que certains changements prennent effet.
+
+> ✅ Si l'import se termine sans message d'erreur, vos réglages sont bien appliqués.
+
+---
+
 ## 📁 Contenu du dépôt
 
 | Fichier | Rôle |
@@ -23,82 +117,6 @@
 | `Export.bat` | Exporte tous les paramètres BIOS actuels dans un fichier `nvram.txt`. |
 | `Import.bat` | Applique les modifications du fichier `nvram.txt` au BIOS. |
 | `amiflldrv64.sys` / `amigendrv64.sys` | Drivers nécessaires au fonctionnement de SceWin. |
-
----
-
-## 🪜 Procédure complète — étape par étape
-
-### Étape 1 — Appliquer la clé de registre
-
-Double-cliquez sur **`SCEWIN_FIX.reg`** et confirmez l'ajout au registre Windows.
-
-> Cette étape est **obligatoire** avant tout le reste. Elle permet à SceWin de communiquer correctement avec le BIOS sur les systèmes Windows récents.
-
----
-
-### Étape 2 — Exporter les paramètres BIOS actuels
-
-Faites un **clic droit** sur `Export.bat` → **Exécuter en tant qu'administrateur**.
-
-Un fichier **`nvram.txt`** sera créé dans le même dossier.  
-Il contient l'intégralité des paramètres BIOS de votre machine.
-
-> 💡 **Conseil :** Faites immédiatement une copie de ce fichier sous le nom `nvram_backup.txt` avant de le modifier — cela vous permettra de tout restaurer si besoin.
-
----
-
-### Étape 3 — Modifier le fichier nvram.txt
-
-Ouvrez `nvram.txt` avec un éditeur de texte (Notepad, VS Code, Notepad++…).
-
-Chaque paramètre BIOS est listé avec toutes ses valeurs possibles.  
-L'option **actuellement active** est indiquée par un astérisque **`*`** placé devant la valeur.
-
-**Pour changer une option, déplacez simplement le `*` vers la ligne de la valeur souhaitée.**
-
-Chaque entrée dans le fichier ressemble à ceci — voici un exemple réel :
-
-```
-Setup Question	= SVM Mode
-Help String	= Enable/Disable CPU Virtualization.
-Token	=29	// Do NOT change this line
-Offset	=14C
-Width	=01
-BIOS Default	=[00]Disabled 
-Options	=*[00]Disabled	// Move "*" to the desired Option
-         [01]Enabled
-```
-
-Ici, le `*` est sur `[00]Disabled` → la virtualisation CPU est **désactivée**.
-
-Pour l'**activer**, on déplace le `*` sur `[01]Enabled` :
-
-```
-Setup Question	= SVM Mode
-Help String	= Enable/Disable CPU Virtualization.
-Token	=29	// Do NOT change this line
-Offset	=14C
-Width	=01
-BIOS Default	=[00]Disabled 
-Options	=[00]Disabled	// Move "*" to the desired Option
-         *[01]Enabled
-```
-
-> [!IMPORTANT]
-> Ne modifiez **que la ligne `Options`**. Les champs `Token`, `Offset`, `Width` ne doivent jamais être changés.  
-> Il doit toujours y avoir **un seul `*`** par bloc `Options`.
-
-> 💡 Utilisez `Ctrl+F` pour rechercher un réglage par nom (ex: `SVM Mode`, `Cool&Quiet`, `NX Mode`, `Above 4G`).  
-> Si vous débutez, ne modifiez **qu'un seul paramètre à la fois** pour identifier facilement la cause en cas de problème.
-
----
-
-### Étape 4 — Importer les modifications
-
-Faites un **clic droit** sur `Import.bat` → **Exécuter en tant qu'administrateur**.
-
-Les modifications sont appliquées directement au BIOS.  
-Un **redémarrage** peut être nécessaire pour que certains changements prennent effet.
 
 ---
 

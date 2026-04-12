@@ -40,12 +40,11 @@ Ces paramètres sont à désactiver dans le fichier `nvram.txt` pour réduire la
 
 | # | Nom du réglage | Valeur cible | Impact | Notes |
 |---|---|---|---|---|
-| 1 | `TSME` *(Transparent Secure Memory Encryption)* | `[00] Disabled` | ✅ Sûr | Chiffrement transparent de la RAM — désactivé, il retire **5 à 7 ns de latence mémoire** ajoutée. Aucun impact sécurité sur un PC personnel non partagé. |
-| 2 | `IOMMU` | `[00] Disabled` | ✅ Sûr | Unité de gestion mémoire pour les périphériques DMA — inutile sans virtualisation (VM, WSL2). Sa désactivation réduit les interruptions parasites. |
-| 3 | `SR-IOV Support` | `[00] Disabled` | ✅ Sûr | Permet à un périphérique PCIe (GPU, carte réseau…) d'être partagé entre plusieurs machines virtuelles. Sans hyperviseur, c'est inutile. Cohérent avec la désactivation de l'IOMMU. |
-| 4 | `Chipset Power Saving Features` | `[00] Disabled` | ✅ Sûr | Désactive la gestion d'énergie du chipset (ASPM, liens PCIe en L1…) — gain marginal sur la latence des communications CPU ↔ chipset. Sans risque d'instabilité notable. |
-| 5 | `Data Scramble` | `[00] Disabled` | ⚠️ Tester | Brouillage des données mémoire pour réduire les interférences électromagnétiques (EMI). Peut améliorer la latence RAM mais peut causer une instabilité avec XMP/EXPO activé sur certains kits. Tester avec soin. |
-| 6 | `APBDIS` | `[01]` (valeur `1`) | ⚠️ Tester | Force le P-State 0 de l'Infinity Fabric en permanence — fréquence IF fixe, zéro transition. Gain de cohérence sur les accès mémoire. Pas présent sur tous les BIOS. |
+| 1 | `SR-IOV Support` | `[00] Disabled` | ✅ Sûr | Permet à un périphérique PCIe (GPU, carte réseau…) d'être partagé entre plusieurs machines virtuelles. Sans hyperviseur, c'est inutile. |
+| 2 | `Chipset Power Saving Features` | `[00] Disabled` | ✅ Sûr | Désactive la gestion d'énergie du chipset (ASPM, liens PCIe en L1…) — gain marginal sur la latence des communications CPU ↔ chipset. Sans risque d'instabilité notable. |
+| 3 | `TSME` *(Transparent Secure Memory Encryption)* | `[00] Disabled` | ✅ Sûr | Chiffrement transparent de la RAM — désactivé, il retire **5 à 7 ns de latence mémoire** ajoutée. Aucun impact sécurité sur un PC personnel non partagé. |
+| 4 | `Data Scramble` | `[00] Disabled` | ⚠️ Tester | Brouillage des données mémoire pour réduire les interférences électromagnétiques (EMI). Peut améliorer la latence RAM mais peut causer une instabilité avec XMP/EXPO activé sur certains kits. Tester avec soin. |
+| 5 | `IOMMU` | `[00] Disabled` | ⚠️ Tester | Unité de gestion mémoire pour les périphériques DMA — inutile sans virtualisation (VM, WSL2). Sa désactivation réduit les interruptions parasites. |
 
 ### 🟡 Cas particulier — Spread Spectrum
 

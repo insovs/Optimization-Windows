@@ -1,4 +1,4 @@
-# Optimization-Windows / Network / Auto Tuning Level
+# Network & Connectivity / Auto Tuning Level
 
 Controls Windows TCP Auto Tuning — a feature that dynamically adjusts the TCP receive window size to optimize throughput.
 

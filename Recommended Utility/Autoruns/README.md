@@ -24,8 +24,8 @@ Before diving in, these videos walk you through practical usage of the tool:
 
 | Language | Creator | Link |
 |----------|---------|------|
-| French | [Piwi](https://github.com/Piwielle) | [Watch](https://www.youtube.com/watch?v=UpTg5QbNfdc) |
-| English | [TroubleChute](https://www.youtube.com/@TroubleChute) | [Watch](https://www.youtube.com/watch?v=rLv40VBPbXs) |
+| French | [Piwi](https://github.com/Piwielle) | https://www.youtube.com/watch?v=UpTg5QbNfdc |
+| English | [TroubleChute](https://www.youtube.com/@TroubleChute) | https://www.youtube.com/watch?v=rLv40VBPbXs |
 
 ---
 

@@ -25,17 +25,16 @@ Le Gestionnaire des tâches et MSCONFIG ne montrent qu'une infime partie de la r
 
 ## 💪 Pourquoi c'est un outil indispensable ?
 
-| Ce que les autres outils voient | Ce qu'Autoruns voit en plus |
-|---|---|
-| Dossier Démarrage | Clés Run / RunOnce du registre |
-| Liste de démarrage MSCONFIG | Extensions shell Explorer |
-| Services visibles | Pilotes noyau (Drivers) |
-| — | Tâches planifiées |
-| — | AppInit DLLs |
-| — | Image Hijacks (détournements de processus) |
-| — | Fournisseurs Winsock |
-| — | Entrées Winlogon |
-| — | Codecs, LSA Providers, Print Monitors... |
+Le Gestionnaire des tâches et MSCONFIG ne montrent qu'une fraction de ce qui démarre réellement sur ton système. Autoruns expose **tout**, dans l'ordre exact où Windows le charge — bien plus que n'importe quel autre outil gratuit.
+
+Voici les principales sections couvertes :
+
+- **Services** — services Windows démarrant automatiquement
+- **Drivers** — pilotes noyau enregistrés sur le système
+- **Scheduled Tasks** — tâches planifiées au boot ou à intervalles réguliers
+- **Boot Execute** — programmes lancés avant même le chargement de Windows
+- **Logon** — programmes lancés à la connexion utilisateur
+- et bien d'autres emplacements
 
 Autoruns va **infiniment plus loin** que tout ce que Windows propose nativement. C'est pour ça qu'il est utilisé aussi bien par les power users qui veulent optimiser leur PC que par les experts en cybersécurité qui traquent des malwares.
 

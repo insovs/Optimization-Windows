@@ -16,7 +16,7 @@ Avant de te lancer, ces vidéos te guident pas à pas sur l'utilisation concrèt
 
 | Langue | Créateur | Lien |
 |--------|----------|------|
-| 🇫🇷 Français | [Piwi](https://github.com/Piwielle) | [Regarder](https://www.youtube.com/watch?v=UpTg5QbNfdc) |
-| 🇬🇧 Anglais | *(à compléter)* | [Regarder](https://www.youtube.com/watch?v=rLv40VBPbXs) |
+| Français | [Piwi](https://github.com/Piwielle) | [Regarder](https://www.youtube.com/watch?v=UpTg5QbNfdc) |
+| Anglais | [TroubleChute](https://www.youtube.com/@TroubleChute) | [Regarder](https://www.youtube.com/watch?v=rLv40VBPbXs) |
 
 ---

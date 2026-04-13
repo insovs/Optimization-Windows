@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Disable shpamsvc (Shared PC Account Manager Service)
+; This service is used in Shared PC mode (kiosk, school, enterprise environments).
+; It manages temporary user accounts, restrictions, and session cleanup.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\shpamsvc]
+"Start"=dword:00000004

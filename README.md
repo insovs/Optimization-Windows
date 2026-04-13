@@ -1,4 +1,4 @@
-<img width="1418" height="495" alt="Windows-Optimization-banner" src="https://github.com/user-attachments/assets/aa436e10-600c-4a25-9b64-a5d311b92cc5" />
+<img width="1920" height="703" alt="optimization-windows-banner" src="https://github.com/user-attachments/assets/e6e11ac3-90dd-4900-9ff1-177c5f4c2a70" />
 
 This project provides a collection of scripts and tools etc designed to optimize your Windows system, especially for better performance & latency.
 

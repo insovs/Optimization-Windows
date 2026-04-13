@@ -1,4 +1,4 @@
-# USB Hub Power Management (Disable Selective Suspend etc Features)
+# USB Hub Power Management (Disable Selective Suspend)
 
 **Eliminates USB power-saving features on all hubs and controllers to ensure stable, uninterrupted and low-latency connections.**
 

@@ -11,9 +11,9 @@
 | `Disable-Compatibility-Assistant-Service.reg` | Program Compatibility Assistant (`PcaSvc`) | Windows may stop warning you about incompatible apps |
 | `Disable-DiagnosticHub.reg` | Microsoft Diagnostics Hub Standard Collector (`diagnosticshub.standardcollector.service`) | Skip if you use Visual Studio performance profiling |
 | `Disable-OnlineSpeechRecognition.reg` | Online Speech Recognition (`SpeechRuntime`) | Cortana voice features will stop working |
-| `Disable-InkWorkspaceService.reg` | Ink & Typing Personalization (`registry only`) | Skip if you use a stylus or pen input |
 | `Disable-Data-Usage-Monitoring-Service.reg` | Data Usage Monitoring Service (`DusmSvc`) | Windows Settings → Network → Data Usage will no longer update |
 | `Disable-Windows-Error-Reporting-Control-Panel-Support.reg` | Windows Error Reporting Control Panel Support (`wercplsupport`) | The "Problem Reports" section in Control Panel will stop working |
 | `Disable-WAPPushRouting.reg` | WAP Push Message Routing (`dmwappushservice`) | — |
-| `Disable-CompatTelRunner.reg` | Microsoft Compatibility Telemetry (`AppCompat policy`) | Random CPU spikes will stop — no user-facing impact |
 | `Disable-Geolocation.reg` | Geolocation Service (`lfsvc`) | Weather, Maps and Find My Device will stop working |
+| `Disable-InkWorkspaceService.reg` | Ink & Typing Personalization (`registry only`) | Skip if you use a stylus or pen input |
+| `Disable-CompatTelRunner.reg` | Microsoft Compatibility Telemetry (`AppCompat policy`) | Random CPU spikes will stop — no user-facing impact |

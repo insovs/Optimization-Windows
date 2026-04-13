@@ -1,4 +1,13 @@
+<div align="center">
 <img width="1920" height="703" alt="optimization-windows-banner" src="https://github.com/user-attachments/assets/e6e11ac3-90dd-4900-9ff1-177c5f4c2a70" />
+
+[![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D4?style=flat-square&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
+[![Discord](https://img.shields.io/badge/Support-Discord-5865F2?logo=discord&logoColor=white)](https://discord.com/invite/fayeECjdtb)
+
+---
+</div>
+
+## 🚀 Overview
 
 A curated collection of scripts and tools to optimize your Windows system for maximum performance and minimum latency.
 

@@ -15,5 +15,8 @@
 | `Disable-Windows-Error-Reporting-Control-Panel-Support.reg` | Windows Error Reporting Control Panel Support (`wercplsupport`) | The "Problem Reports" section in Control Panel will stop working |
 | `Disable-WAPPushRouting.reg` | WAP Push Message Routing (`dmwappushservice`) | — |
 | `Disable-Geolocation.reg` | Geolocation Service (`lfsvc`) | Weather, Maps and Find My Device will stop working |
+| `Disable-MicrosoftEdgeServices.reg` | Microsoft Edge Elevation + Update Services (`MicrosoftEdgeElevationService`, `edgeupdate`, `edgeupdatem`) | Edge will no longer auto-update — irrelevant if you don't use Edge |
+| `Disable-DistributedLinkTracking.reg` | Distributed Link Tracking Client (`TrkWks`) | Shortcuts to moved files may stop auto-resolving |
+| `Disable-RetailDemo.reg` | Retail Demo Service (`RetailDemo`) | Microsoft demo service — pure retail telemetry |
 | `Disable-InkWorkspaceService.reg` | Ink & Typing Personalization (`registry only`) | Skip if you use a stylus or pen input |
 | `Disable-CompatTelRunner.reg` | Microsoft Compatibility Telemetry (`AppCompat policy`) | Random CPU spikes will stop — no user-facing impact |

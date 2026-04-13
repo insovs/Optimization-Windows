@@ -19,6 +19,11 @@ Autoruns est un outil **gratuit et officiel de Microsoft** (suite Sysinternals),
 
 ---
 
-## ⚙️ Configuration recommandée avant de commencer
+## 🎬 Tutoriels vidéo
 
-Avant d'analyser quoi que ce soit, applique ces deux options dans le menu **Options** :
+Avant de te lancer, ces vidéos te guident pas à pas sur l'utilisation concrète de l'outil :
+
+- 🇫🇷 **Français** — [Piwi](https://github.com/Piwielle) : https://www.youtube.com/watch?v=UpTg5QbNfdc
+- 🇬🇧 **Anglais** — *(à compléter)*
+
+---

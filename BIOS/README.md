@@ -103,12 +103,9 @@ Options  =[00]Disabled    // Move "*" to the desired Option
 
 // ✅ After — setting is now Disabled
 Options  =*[00]Disabled   // Move "*" to the desired Option
-           [01]Enabled
+          [01]Enabled
 ```
 
-> [!IMPORTANT]
-> - Only ever touch the **`Options`** line — never `Token`, `Offset`, `Width`, or any other field
-> - There must always be **exactly one `*`** per block — not zero, not two
 
 ---
 

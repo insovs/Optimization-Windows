@@ -1,41 +1,40 @@
 <img width="1920" height="703" alt="optimization-windows-banner" src="https://github.com/user-attachments/assets/e6e11ac3-90dd-4900-9ff1-177c5f4c2a70" />
 
-This project provides a collection of scripts and tools etc designed to optimize your Windows system, especially for better performance & latency.
+A curated collection of scripts and tools to optimize your Windows system for maximum performance and minimum latency.
 
-## Content
+## What's included
 
-Here you will find many optimizations, organized into categories such as:
+Optimizations are organized into the following categories:
 
-* System
-* Network
-* Services
-* Scheduled Tasks
-* Windows Security
-* And more...
+| Category | Description |
+|---|---|
+| System | Core OS tweaks and registry edits |
+| Network | Latency and throughput improvements |
+| Services | Disable unnecessary background services |
+| Scheduled Tasks | Remove bloat from task scheduler |
+| Windows Security | Fine-tune security settings without compromising protection |
 
-Each item can be used individually depending on your needs.
-
-## Project Status
-
-This project is still a work in progress.
-New optimizations and improvements will be added over time.
+Each item is standalone — apply only what you need.
 
 ## Usage
 
-Even though the project is not finished, **everything currently included is functional and can already be used**.
+> **Before anything**, create a system restore point.
 
-It is recommended to:
+It is strongly recommended to run all scripts via **PowerRun** (located in the `Run with privileges` folder).
+This ensures execution under **TrustedInstaller** privileges, which is required for some changes to apply correctly.
 
-* **Run scripts using PowerRun (found in the "Run with privileges" section)** — this allows them to execute with TrustedInstaller privileges, ensuring that all changes are applied correctly.
-* Understand what each script does before running it
-* Create a system restore point for safety
+1. Download or clone the repository
+2. Open the desired category folder
+3. Read the script description before running it
+4. Execute via PowerRun for full privileges
 
-## Goal
+> Everything currently included is **functional and ready to use**, even though the project is still evolving.
 
-To provide a complete and evolving base for optimizing Windows easily, whether for gaming or everyday use.
+## Project status
+
+This project is actively maintained. New optimizations and improvements are added regularly.
+Feel free to open an issue or submit a pull request if you have suggestions.
 
 ---
 
-Feel free to check back regularly for updates!
-
----
+> Built for competitive gamers, power users, and optimization enthusiasts.

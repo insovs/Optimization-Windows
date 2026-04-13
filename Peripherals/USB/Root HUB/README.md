@@ -3,7 +3,7 @@
 
 **Eliminates USB power-saving features on all hubs and controllers to ensure stable, uninterrupted and low-latency connections.**
 
-This script targets every USB hub and controller detected on your system and disables all power management features at the registry level — selective suspend, idle power management, advanced power saving, and more. Designed for competitive players and professionals looking for the most complete and reliable way to eliminate input latency, micro-stutters and random disconnections caused by Windows USB power management.
+This script targets every USB hub and controller detected on your system and disables all power management features at the registry level — selective suspend, idle power management, advanced power saving, and more. Designed for competitive players and professionals looking for the most complete and reliable way to eliminate input latency, micro-stutters and random disconnections caused by Windows USB power management. It Ensures peripherals operate at full capacity without power-saving interference.
 
 <details>
 <summary><b>► Show Preview Script</b></summary>
@@ -19,11 +19,10 @@ This script targets every USB hub and controller detected on your system and dis
 
 ## What it fixes:
 
-### - Ensures peripherals operate at full capacity without power-saving interference
-### - Input latency spikes caused by USB power-saving delays
-### - Instability on USB hubs under load
-### - Selective suspend re-engaging after sleep or restart
-### - Random disconnections and reconnections on mice, keyboards and peripherals
+- Input latency spikes caused by USB power-saving delays.
+- Instability on USB hubs under load
+- Selective suspend re-engaging after sleep or restart
+- Random disconnections and reconnections on mice, keyboards and peripherals
 
 ---
 

@@ -20,9 +20,9 @@ This script targets every USB hub and controller detected on your system and dis
 ## What it fixes:
 
 - Input latency spikes caused by USB power-saving delays.
-- Instability on USB hubs under load
-- Selective suspend re-engaging after sleep or restart
-- Random disconnections and reconnections on mice, keyboards and peripherals
+- Instability on USB hubs under load.
+- Selective suspend re-engaging after sleep or restart.
+- Random disconnections and reconnections on mice, keyboards and peripherals.
 
 ---
 

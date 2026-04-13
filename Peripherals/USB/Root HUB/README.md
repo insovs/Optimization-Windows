@@ -46,8 +46,8 @@ The script modifies registry keys under `HKLM:\SYSTEM\CurrentControlSet\Enum` fo
 
 ## 📥 Download & Usage:
 
-1. Download `DisableRootHUBPowerManagement.ps1` from this folder
-2. **Right-click → Run with PowerShell** — the script will auto-elevate to administrator
+1. Download `DisableRootHUBPowerManagement.ps1` from this folder.
+2. **Right-click → Run with PowerShell** — the script will auto-elevate to administrator.
 
 > [!CAUTION]
 > If PowerShell scripts are blocked on your system, enable execution first:

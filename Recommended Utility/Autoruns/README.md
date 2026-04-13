@@ -3,10 +3,6 @@
 
 **L'outil de référence pour auditer, optimise, nettoyer et sécuriser tout ce qui démarre avec Windows.**
 
----
-
-## 🧠 C'est quoi Autoruns ?
-
 Autoruns est un outil **gratuit et officiel de Microsoft** (suite Sysinternals), créé par Mark Russinovich. C'est l'utilitaire **le plus complet qui existe** pour visualiser tout ce qui se lance automatiquement sur Windows — au démarrage, à la connexion, ou en arrière-plan.
 
 Le Gestionnaire des tâches et MSCONFIG ne montrent qu'une infime partie de la réalité. Autoruns, lui, expose **absolument tout** : clés de registre cachées, extensions shell, pilotes, tâches planifiées, DLLs injectées, fournisseurs Winsock, et bien plus encore.

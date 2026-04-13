@@ -1,6 +1,6 @@
 # Telemetry & Diagnostics
 
-> [!NOTE]
+> [1INFORMATION]
 > Services that send data to Microsoft in the background. **Recommended to disable**.
 
 | File | Watch out |

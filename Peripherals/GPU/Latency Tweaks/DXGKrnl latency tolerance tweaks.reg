@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; DXGKrnl (DirectX Graphics Kernel) latency tolerance tweaks.
+; Forces the kernel to minimize display sync and monitor refresh delays, reducing input lag and improving frame delivery.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DXGKrnl]
+"MonitorLatencyTolerance"=dword:00000001
+"MonitorRefreshLatencyTolerance"=dword:00000001

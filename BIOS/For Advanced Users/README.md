@@ -2,6 +2,9 @@
 
 Click the links below to read the guides directly:
 
+> [!NOTES]
+> These guides are for users who want to maximize their system's performance through BIOS configuration. However, these modifications are not without risk: it is essential to fully understand each parameter and to make changes gradually and in a        > controlled manner to minimize any instability or malfunction.
+
 | Guide | Link |
 |-------|------|
 | 📄 Ancel's Intel Hidden BIOS Guide | [Read on Google Drive](https://docs.google.com/document/d/1ztCWHU2vCG9hnD_94VhlnsLJq1-0Mq7OwhjF79JsYgA/edit?usp=drive_link) |

@@ -1,4 +1,5 @@
 # USB Hub Power Management (Disable Power-Saving Features)
+[![Preview](https://img.shields.io/badge/Video-Preview-FF0000?logo=youtube&logoColor=white)](https://youtu.be/TzJFk-N6kAk)
 
 **Eliminates USB power-saving features on all hubs and controllers to ensure stable, uninterrupted and low-latency connections.**
 

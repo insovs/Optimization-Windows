@@ -57,7 +57,7 @@ The entries below are widely considered safe to disable on a typical desktop PC.
 
 | Entry | Description | Why it's safe |
 |-------|-------------|---------------|
-| `Telemetry` | `\Microsoft\Windows\Application Experience\MareBackup` `\Microsoft\Windows\Application Experience\ProgramDataUpdater` `\Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser` `\Microsoft\Windows\Autochk\Proxy` `\Microsoft\Windows\Customer Experience Improvement Program\*` `\Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector` `\Microsoft\Windows\Windows Error Reporting\QueueReporting` | Pure telemetry and error reporting to Microsoft — no functional impact |
+| `Telemetry` | `\Microsoft\Windows\Application Experience\MareBackup`<br>`\Microsoft\Windows\Application Experience\ProgramDataUpdater`<br>`\Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser`<br>`\Microsoft\Windows\Autochk\Proxy`<br>`\Microsoft\Windows\Customer Experience Improvement Program\*`<br>`\Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector`<br>`\Microsoft\Windows\Windows Error Reporting\QueueReporting` | Pure telemetry and error reporting to Microsoft — no functional impact |
 | `Bluetooth` | `\Microsoft\Windows\Bluetooth\UninstallDeviceTask` | Safe if you don't use any Bluetooth peripherals |
 | `Wi-Fi` | `\Microsoft\Windows\WlanSvc\CDSSync` | Safe if you're on Ethernet only |
 | `Defender` | `\Microsoft\Windows\Windows Defender\*` | **Only** if you want maximum performance and understand that Defender's background scanning is unnecessary in your setup |

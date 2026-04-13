@@ -5,7 +5,6 @@ Services that send data to Microsoft in the background.
 | File | What it disables | Watch out |
 |------|-----------------|-----------|
 | `Disable-DiagTrack.reg` | Sends usage data to Microsoft | — |
-| `Disable-Connected-User-Telemetry.reg` | Same as above but more complete. Use this one instead of DiagTrack | — |
 | `Disable-DiagnosticPolicy.reg` | Auto troubleshooting (mostly useless) | — |
 | `Disable-WAPPushRouting.reg` | Another Microsoft telemetry channel | — |
 | `Disable-WindowsErrorReporting.reg` | Sends crash reports to Microsoft | — |

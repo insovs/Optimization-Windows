@@ -1,4 +1,4 @@
-# 🔧 BIOS Optimization via SceWin
+# 🔧 BIOS Optimization via SceWin (AMD & INTEL)
 
 > Access and modify your BIOS settings — including hidden ones — directly from Windows, without rebooting.
 
@@ -113,7 +113,7 @@ Options  =*[00]Disabled   // Move "*" to the desired Option
 
 **Right-click `Import.bat`** → **Run as administrator**.
 
-SceWin writes the changes directly to your BIOS NVRAM. **Reboot** your PC afterward for all changes to take effect.
+SceWin writes the changes directly to your BIOS. **Reboot** your PC afterward for all changes to take effect.
 
 > ✅ No error message = everything applied correctly.
 > Minor warnings during import are generally harmless — as long as you followed the steps above carefully.
@@ -129,7 +129,7 @@ SceWin writes the changes directly to your BIOS NVRAM. **Reboot** your PC afterw
 | `Export.bat` | Exports all current BIOS settings to a `nvram.txt` file. |
 | `Import.bat` | Applies the changes from `nvram.txt` to the BIOS. |
 | `amiflldrv64.sys` / `amigendrv64.sys` | Drivers required for SceWin to operate. |
-| `AMD BIOS Settings Guide.pdf` | Full reference documentation by @insopti (remastered from @Ancel's original guide) — covers all visible and hidden AMD BIOS settings in detail, including advanced options beyond this README. |
+| `Advanced Users/BIOS Settings Guide.pdf` | Full reference documentation — covers all visible and hidden AMD BIOS settings in detail, including advanced options beyond this README. |
 
 ---
 

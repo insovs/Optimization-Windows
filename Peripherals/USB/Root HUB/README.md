@@ -1,23 +1,22 @@
-# USB Hub Power Management (disables power-saving features)
+# USB Hub Power Management (Disable Power-Saving Features)
 
 **Eliminates USB power-saving features on all hubs and controllers to ensure stable, uninterrupted and low-latency connections.**
 
-This script targets every USB hub and controller detected on your system and disables all power management features at the registry level — selective suspend, idle power management, advanced power saving, and more.
-
-> Used by competitive players and professionals to eliminate input latency, micro-stutters and random disconnections caused by Windows USB power management.
+This script targets every USB hub and controller detected on your system and disables all power management features at the registry level — selective suspend, idle power management, advanced power saving, and more. Designed for competitive players and professionals looking for the most complete and reliable way to eliminate input latency, micro-stutters and random disconnections caused by Windows USB power management.
 
 ---
 
-## ⚡ What it fixes
+## What it fixes:
 
-- Random disconnections and reconnections on mice, keyboards and peripherals
+- Ensures peripherals operate at full capacity without power-saving interference
 - Input latency spikes caused by USB power-saving delays
 - Instability on USB hubs under load
 - Selective suspend re-engaging after sleep or restart
+- Random disconnections and reconnections on mice, keyboards and peripherals
 
 ---
 
-## 🛠️ What it does
+## What it does:
 
 The script modifies registry keys under `HKLM:\SYSTEM\CurrentControlSet\Enum` for every USB hub and controller detected via PnP, disabling the following:
 
@@ -35,10 +34,10 @@ The script modifies registry keys under `HKLM:\SYSTEM\CurrentControlSet\Enum` fo
 
 ---
 
-## 📥 Download & Usage
+## 📥 Download & Usage:
 
-1. Download `DisableRootHUBPowerManagement.ps1` from this folder.
-2. **Right-click → Run with PowerShell** — the script will auto-elevate to administrator.
+1. Download `DisableRootHUBPowerManagement.ps1` from this folder
+2. **Right-click → Run with PowerShell** — the script will auto-elevate to administrator
 
 > [!CAUTION]
 > If PowerShell scripts are blocked on your system, enable execution first:
@@ -53,6 +52,6 @@ The script modifies registry keys under `HKLM:\SYSTEM\CurrentControlSet\Enum` fo
 
 | Link |
 |------|
-| [Watch](https://www.youtube.com/watch?v=) |
+| https://www.youtube.com/watch?v= |
 
 ---

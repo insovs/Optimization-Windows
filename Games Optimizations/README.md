@@ -1,3 +1,4 @@
+<img width="723" height="330" alt="image" src="https://github.com/user-attachments/assets/899361dc-2bf8-45c8-ac44-ff3688ca0d3b" />
 <div align="center">
 
 # Executable Performance Manager

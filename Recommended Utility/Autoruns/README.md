@@ -36,28 +36,42 @@ Before diving in, these videos walk you through practical usage of the tool:
 
 The entries below are widely considered safe to disable on a typical desktop PC. This is not an exhaustive list — it's a conservative starting point.
 
+## ⚡ Optimization — Safe Entries to Disable
+
+> [!WARNING]
+> Only uncheck entries — never delete them. This lets you re-enable them if something breaks. When in doubt, leave it enabled.
+
+---
+
 ### 🔧 Services
 
 | Entry | Description | Why it's safe |
 |-------|-------------|---------------|
-| `DiagTrack` | Connected User Experiences and Telemetry | Microsoft telemetry — no impact on functionality |
-| `WSearch` | Windows Search | Disables file indexing; search still works, just slower on first use |
-| `SysMain` (Superfetch) | Memory preloading | Redundant on SSDs; can cause unnecessary disk activity |
-| `Fax` | Fax service | Useful only if you use a fax modem |
+| `Telemetry` | DiagTrack, DiagnosticHub.StandardCollector.Service, dmwappushservice, DPS | Disables Microsoft telemetry collection — no functional impact |
+| `Bluetooth` | bthserv, BthA2dp, BluetoothUserService, BthHFEnum | Safe if you never use Bluetooth or don't use any Bluetooth peripherals |
+| `Wi-Fi` | WlanSvc | Safe if you never use Wi-Fi or don't use any Wi-Fi peripherals |
+
+---
 
 ### 📅 Scheduled Tasks
 
 | Entry | Description | Why it's safe |
 |-------|-------------|---------------|
-| `Microsoft\Windows\Customer Experience Improvement Program\*` | CEIP telemetry tasks | Pure telemetry, no functional impact |
-| `Microsoft\Windows\Autochk\Proxy` | Error reporting proxy | Part of the error reporting system, not essential |
-| `Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector` | Disk telemetry collection | Data collection only, no diagnostic function |
+| `Telemetry` | `\Microsoft\Windows\Application Experience\MareBackup` `\Microsoft\Windows\Application Experience\ProgramDataUpdater` `\Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser` `\Microsoft\Windows\Autochk\Proxy` `\Microsoft\Windows\Customer Experience Improvement Program\*` `\Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector` `\Microsoft\Windows\Windows Error Reporting\QueueReporting` | Pure telemetry and error reporting to Microsoft — no functional impact |
+| `Bluetooth` | `\Microsoft\Windows\Bluetooth\UninstallDeviceTask` | Safe if you don't use any Bluetooth peripherals |
+| `Wi-Fi` | `\Microsoft\Windows\WlanSvc\CDSSync` | Safe if you're on Ethernet only |
+| `Defender` | `\Microsoft\Windows\Windows Defender\*` | **Only** if you want maximum performance and understand that Defender's background scanning is unnecessary in your setup |
+---
 
 ### 🖥️ Drivers
 
 | Entry | Description | Why it's safe |
 |-------|-------------|---------------|
-| `dmwappushservice` | WAP Push Message Routing | Telemetry-related, not needed on desktop |
+| `Bluetooth` | BTHUSB, BthLEEnum, BthA2dp | Safe if you don't use any Bluetooth peripherals |
+| `Wi-Fi` | Netwtw, Netwtw10, RtlWlanu | Safe if you're on Ethernet only and never use Wi-Fi |
+| `Defender` | WdFilter | **Only** if you use a third-party AV — never disable otherwise |
+
+---
 
 > [!NOTE]
 > More entries will be added here over time. If you're unsure about an entry, right-click it in Autoruns and select **Search Online** — it will query the web for information about that specific executable.

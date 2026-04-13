@@ -5,8 +5,6 @@
 
 [![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D4?style=flat-square&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
 [![Discord](https://img.shields.io/badge/Support-Discord-5865F2?logo=discord&logoColor=white)](https://discord.com/invite/fayeECjdtb)
-![PowerShell](https://img.shields.io/badge/Language-PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white)
-![Batch](https://img.shields.io/badge/Language-Batch-0078D4?style=flat-square&logo=windows&logoColor=white)
 ![Gaming](https://img.shields.io/badge/Focus-Gaming-red?style=flat-square)
 ![Performance](https://img.shields.io/badge/Performance-Oriented-blueviolet?style=flat-square)
 

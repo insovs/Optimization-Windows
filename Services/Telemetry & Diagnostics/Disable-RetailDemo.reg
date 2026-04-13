@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Disables the "Retail Demo Service" (RetailDemo).
+; This service is used in retail stores to showcase Windows features.
+; Pure Microsoft telemetry with zero user benefit on personal PCs.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RetailDemo]
+"Start"=dword:00000004

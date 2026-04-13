@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Disables the "Distributed Link Tracking Client" service (TrkWks).
+; This service tracks linked files across NTFS volumes and sends info to Microsoft.
+; Shortcuts to moved files may stop auto-resolving.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TrkWks]
+"Start"=dword:00000004

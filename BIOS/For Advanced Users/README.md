@@ -1,9 +1,9 @@
 # For Advanced Users — BIOS Guides
 
-Click the links below to read the guides directly:
-
 > [!IMPORTANT]
 > These guides are for users who want to maximize their system's performance through BIOS configuration. However, these modifications are not without risk: it is essential to fully understand each parameter and to make changes gradually and in a        > controlled manner to minimize any instability or malfunction.
+
+Click the links below to read the guides directly:
 
 | Guide | Link |
 |-------|------|

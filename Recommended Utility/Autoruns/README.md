@@ -69,4 +69,4 @@ The entries below are widely considered safe to disable on a typical desktop PC.
 ---
 
 > [!NOTE]
-> More entries will be added here over time. If you're unsure about an entry, right-click it in Autoruns and select **Search Online** — it will query the web for information about that specific executable.
+> If you're unsure about an entry, right-click it in Autoruns and select **Search Online** — it will query the web for information about that specific executable.

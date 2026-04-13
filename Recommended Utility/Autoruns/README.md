@@ -24,22 +24,17 @@ Before diving in, these videos walk you through practical usage of the tool:
 
 | Language | Creator | Link |
 |----------|---------|------|
-| 🇫🇷 French | [Piwi](https://github.com/Piwielle) | [Watch](https://www.youtube.com/watch?v=UpTg5QbNfdc) |
-| 🇬🇧 English | [TroubleChute](https://www.youtube.com/@TroubleChute) | [Watch](https://www.youtube.com/watch?v=rLv40VBPbXs) |
+| French | [Piwi](https://github.com/Piwielle) | [Watch](https://www.youtube.com/watch?v=UpTg5QbNfdc) |
+| English | [TroubleChute](https://www.youtube.com/@TroubleChute) | [Watch](https://www.youtube.com/watch?v=rLv40VBPbXs) |
 
 ---
 
-## ⚡ Optimization — Safe Entries to Disable
+## ⚡ Optimization (Safe Entries to Disable)
 
 > [!WARNING]
 > Only uncheck entries — never delete them. This lets you re-enable them if something breaks. When in doubt, leave it enabled.
 
 The entries below are widely considered safe to disable on a typical desktop PC. This is not an exhaustive list — it's a conservative starting point.
-
-## ⚡ Optimization — Safe Entries to Disable
-
-> [!WARNING]
-> Only uncheck entries — never delete them. This lets you re-enable them if something breaks. When in doubt, leave it enabled.
 
 ---
 
@@ -57,10 +52,10 @@ The entries below are widely considered safe to disable on a typical desktop PC.
 
 | Entry | Description | Why it's safe |
 |-------|-------------|---------------|
-| `Telemetry` | `\Microsoft\Windows\Application Experience\MareBackup`<br>`\Microsoft\Windows\Application Experience\ProgramDataUpdater`<br>`\Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser`<br>`\Microsoft\Windows\Autochk\Proxy`<br>`\Microsoft\Windows\Customer Experience Improvement Program\*`<br>`\Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector`<br>`\Microsoft\Windows\Windows Error Reporting\QueueReporting` | Pure telemetry and error reporting to Microsoft — no functional impact |
-| `Bluetooth` | `\Microsoft\Windows\Bluetooth\UninstallDeviceTask` | Safe if you don't use any Bluetooth peripherals |
-| `Wi-Fi` | `\Microsoft\Windows\WlanSvc\CDSSync` | Safe if you're on Ethernet only |
-| `Defender` | `\Microsoft\Windows\Windows Defender\*` | **Only** if you want maximum performance and understand that Defender's background scanning is unnecessary in your setup |
+| `Telemetry` | 1. `\Microsoft\Windows\Application Experience\MareBackup`<br>2. `\Microsoft\Windows\Application Experience\ProgramDataUpdater`<br>3. `\Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser`<br>4. `\Microsoft\Windows\Autochk\Proxy`<br>5. `\Microsoft\Windows\Customer Experience Improvement Program\*`<br>6. `\Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector`<br>7. `\Microsoft\Windows\Windows Error Reporting\QueueReporting` | Pure telemetry and error reporting to Microsoft — no functional impact |
+| `Bluetooth` | 1. `\Microsoft\Windows\Bluetooth\UninstallDeviceTask` | Safe if you don't use any Bluetooth peripherals |
+| `Wi-Fi` | 1. `\Microsoft\Windows\WlanSvc\CDSSync` | Safe if you're on Ethernet only |
+| `Defender` | 1. `\Microsoft\Windows\Windows Defender\*` | **Only** if you want maximum performance and understand that Defender's background scanning is unnecessary in your setup |
 ---
 
 ### 🖥️ Drivers

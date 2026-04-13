@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Disable DusmSvc (Data Usage Monitoring Service)
+; Collects network usage statistics for Microsoft telemetry.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DusmSvc]
+"Start"=dword:00000004

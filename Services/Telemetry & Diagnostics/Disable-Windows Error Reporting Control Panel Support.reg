@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Disable wercplsupport (Windows Error Reporting Control Panel Support)
+; Supports the Error Reporting UI and telemetry submission to Microsoft.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wercplsupport]
+"Start"=dword:00000004

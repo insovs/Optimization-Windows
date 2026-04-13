@@ -7,7 +7,7 @@
 [![Discord](https://img.shields.io/badge/Support-Discord-5865F2?logo=discord&logoColor=white)](https://discord.com/invite/fayeECjdtb)
 ![PowerShell](https://img.shields.io/badge/Language-PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white)
 ![Gaming](https://img.shields.io/badge/Focus-Gaming-red?style=flat-square)
-![Performance](https://img.shields.io/badge/Performance-Maximum-blueviolet?style=flat-square)
+![Performance](https://img.shields.io/badge/Performance-Oriented-blueviolet?style=flat-square)
 
 ---
 </div>

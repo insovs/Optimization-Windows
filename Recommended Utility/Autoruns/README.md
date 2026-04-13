@@ -7,24 +7,10 @@ Autoruns est un outil **gratuit et officiel de Microsoft** (suite Sysinternals),
 
 Le Gestionnaire des tâches et MSCONFIG ne montrent qu'une infime partie de la réalité. Autoruns, lui, expose **absolument tout** : clés de registre cachées, extensions shell, pilotes, tâches planifiées, DLLs injectées, fournisseurs Winsock, et bien plus encore.
 
-> **En résumé :** il permet de voir tout se qui se lance avec Windows sur la machine.
-
----
-
-## 💪 Pourquoi c'est un outil indispensable ?
-
-Autoruns expose **tout**, dans l'ordre exact où Windows le charge — bien plus que n'importe quel autre outil gratuit et Windows.
-
-Voici les principales sections couvertes :
-
-- **Services** — services Windows démarrant automatiquement
-- **Drivers** — pilotes noyau enregistrés sur le système
-- **Scheduled Tasks** — tâches planifiées au boot ou à intervalles réguliers
-- **Boot Execute** — programmes lancés avant même le chargement de Windows
-- **Logon** — programmes lancés à la connexion utilisateur
-- et bien d'autres emplacements
-
 Autoruns va **infiniment plus loin** que tout ce que Windows propose nativement. C'est pour ça qu'il est utilisé aussi bien par les power users qui veulent optimiser leur PC que par les experts en cybersécurité qui traquent des malwares.
+> Autoruns est l'outil que les ingénieurs Microsoft eux-mêmes utilisent pour diagnostiquer les systèmes compromis.
+
+> **En résumé :** il permet de voir tout se qui se lance avec Windows sur la machine. c'est un outil indispensable pour optimiser un systeme et desactiver toutes choses que nous ne voulons pas ou nutilisons pas pour gagnez en perfromances et latence.
 
 ---
 

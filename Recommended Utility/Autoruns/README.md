@@ -9,9 +9,9 @@ Autoruns is a **free, official Microsoft tool** (Sysinternals suite), created by
 
 ## 📥 Download & Launch
 
-1. Download `autoruns.exe` from this folder **or** directly from [Microsoft Sysinternals](https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns)
-2. **No installation required** — it's a portable tool, just run it directly
-3. **Right-click → Run as administrator** to get full visibility over system entries
+1. Download `autoruns.exe` from this folder **or** directly from [Microsoft Sysinternals](https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns).
+2. **No installation required** — it's a portable tool, just run it directly.
+3. **Right-click → Run as administrator** to get full visibility over system entries.
 
 > [!IMPORTANT]
 > Without administrator rights, Autoruns cannot see drivers, system services, and other critical entries. Always run it as admin.

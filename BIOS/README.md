@@ -16,14 +16,14 @@ These settings should be disabled in the `nvram.txt` file to reduce latency and 
 
 | # | Setting Name | Target Value | Why? |
 |---|---|---|---|
-| 1 | `Spread Spectrum` | `[00] Disabled` | Slightly modulates the clock frequency to reduce electromagnetic interference (EMI) — disabling it stabilizes the clock frequency and can reduce signal jitter on some configurations. |
-| 2 | `AMD Cool&Quiet function` | `[00] Disabled` | Disables AMD's dynamic CPU frequency management — keeps the processor at its maximum frequency at all times and eliminates micro-variations in performance caused by P-State transitions. |
-| 3 | `Global C-state Control` | `[00] Disabled` | Prevents the CPU from entering deep sleep states (C1, C6…) — eliminates micro-latencies caused by the processor waking up during sudden load spikes. |
-| 4 | `DF C-states` | `[00] Disabled` | Keeps the Infinity Fabric (AMD's internal bus connecting the CPU, memory, and cores) out of low-frequency idle mode — removes micro-latency spikes when activity resumes. |
-| 5 | `Power Down Enable` | `[00] Disabled` | Disables sleep mode for unused memory banks — reduces RAM latency and improves frametime consistency. |
-| 6 | `Power Supply Idle Control` | `[02] Typical Current Idle` | Reduces voltage fluctuations during load transitions — stabilizes performance and frametimes. |
-| 7 | `ECO Mode` | `[00] Disabled` | Lifts the TDP limit imposed on the CPU — allows the processor to reach its maximum boost frequencies without power restrictions. |
-| 8 | `Bluetooth Controller` | `[00] Disabled` | Disables the onboard Bluetooth controller — removes periodic device polling and interrupts, freeing IRQ resources. Only disable if you don't use Bluetooth. |
+| 1 | `Spread Spectrum` | `Disabled` | Slightly modulates the clock frequency to reduce electromagnetic interference (EMI) — disabling it stabilizes the clock frequency and can reduce signal jitter on some configurations. |
+| 2 | `AMD Cool&Quiet function` | `Disabled` | Disables AMD's dynamic CPU frequency management — keeps the processor at its maximum frequency at all times and eliminates micro-variations in performance caused by P-State transitions. |
+| 3 | `Global C-state Control` | `isabled` | Prevents the CPU from entering deep sleep states (C1, C6…) — eliminates micro-latencies caused by the processor waking up during sudden load spikes. |
+| 4 | `DF C-states` | `Disabled` | Keeps the Infinity Fabric (AMD's internal bus connecting the CPU, memory, and cores) out of low-frequency idle mode — removes micro-latency spikes when activity resumes. |
+| 5 | `Power Down Enable` | `[Disabled` | Disables sleep mode for unused memory banks — reduces RAM latency and improves frametime consistency. |
+| 6 | `Power Supply Idle Control` | `Typical Current Idle` | Reduces voltage fluctuations during load transitions — stabilizes performance and frametimes. |
+| 7 | `ECO Mode` | `Disabled` | Lifts the TDP limit imposed on the CPU — allows the processor to reach its maximum boost frequencies without power restrictions. |
+| 8 | `Bluetooth Controller` | `Disabled` | Disables the onboard Bluetooth controller — removes periodic device polling and interrupts, freeing IRQ resources. Only disable if you don't use Bluetooth. |
 
 > [!NOTE]
 > These settings are oriented toward **raw performance and minimal latency** — ideal for gaming or workstations. For standard office use, leaving these options enabled saves energy and reduces heat.

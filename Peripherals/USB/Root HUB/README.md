@@ -19,7 +19,7 @@ This script targets every USB hub and controller detected on your system and dis
 
 ## What it fixes:
 
-- Ensures peripherals operate at full capacity without power-saving interference
+### - Ensures peripherals operate at full capacity without power-saving interference
 - Input latency spikes caused by USB power-saving delays
 - Instability on USB hubs under load
 - Selective suspend re-engaging after sleep or restart

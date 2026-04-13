@@ -1,5 +1,5 @@
-<div align="center">
-<img width="724" height="334" alt="hero_cropped" src="https://github.com/user-attachments/assets/127de1ec-418c-4216-984a-adb4e7ea30d5" />
+<img width="860" height="391" alt="ExecutablePerformanceManager" src="https://github.com/user-attachments/assets/31816c4f-d6da-4cd8-9a63-c23e53d0200d" />
+
 
 # Executable Performance Manager
 

@@ -1,5 +1,4 @@
 # Telemetry & Diagnostics
-
 Services that send data to Microsoft in the background.
 
 | File | What it disables | Watch out |
@@ -14,3 +13,6 @@ Services that send data to Microsoft in the background.
 | `Disable-DiagnosticHub.reg` | Collects performance data for Microsoft | Skip if you use Visual Studio performance profiling |
 | `Disable-OnlineSpeechRecognition.reg` | Sends your voice data to Microsoft servers | Cortana voice features will stop working |
 | `Disable-InkWorkspaceService.reg` | Collects data on how you type and write | Skip if you use a stylus or pen input |
+| `Disable-Connected-User-Telemetry.reg` | Connected User Experiences & Telemetry (DiagTrack companion) | — |
+| `Disable-Data-Usage-Monitoring-Service.reg` | Collects network usage statistics for Microsoft | — |
+| `Disable-Windows-Error-Reporting-Control-Panel-Support.reg` | Error Reporting UI and control panel telemetry submission | — |

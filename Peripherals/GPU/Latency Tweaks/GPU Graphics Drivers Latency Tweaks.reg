@@ -1,0 +1,40 @@
+Windows Registry Editor Version 5.00
+
+; GPU GraphicsDrivers latency tweaks
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power]
+"DefaultD3TransitionLatencyIdleMonitorOff"=dword:00000001
+"DefaultD3TransitionLatencyIdleNoContext"=dword:00000001
+"DefaultD3TransitionLatencyIdleShortTime"=dword:00000001
+"DefaultD3TransitionLatencyIdleLongTime"=dword:00000001
+"DefaultLatencyToleranceIdle0"=dword:00000001
+"DefaultLatencyToleranceIdle1"=dword:00000001
+"DefaultLatencyToleranceMemory"=dword:00000001
+"DefaultLatencyToleranceNoContext"=dword:00000001
+"DefaultLatencyToleranceOther"=dword:00000001
+"DefaultLatencyToleranceTimerPeriod"=dword:00000001
+"DefaultMemoryRefreshLatencyToleranceActiveOnly"=dword:00000001
+"DefaultMemoryRefreshLatencyToleranceMonitorOff"=dword:00000001
+"DefaultMemoryRefreshLatencyToleranceNoContext"=dword:00000001
+"Latency"=dword:00000001
+"MaxAverageGraphicsLatencyInOneBucket"=dword:00000001
+"MiracastPerfTrackGraphicsLatency"=dword:00000001
+"MonitorLatencyTolerance"=dword:00000001
+"MonitorRefreshLatencyTolerance"=dword:00000001
+"TransitionLatency"=dword:00000001
+
+; (Class GUID display adapter)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000]
+"D3PCLatency"=dword:00000001
+"F1TransitionLatency"=dword:00000001
+"LOWLATENCY"=dword:00000001
+"Node3DLowLatency"=dword:00000001
+"PciLatencyTimerControl"=dword:00000020
+"RMDeepL1EntryLatencyUsec"=dword:00000001
+"RmGspcMaxFus"=dword:00000001
+"RmGspcMinFus"=dword:00000001
+"RmGspcPeriodUs"=dword:00000001
+"RMLpwrElIdleThresholdUs"=dword:00000001
+"RMLpwrGrIdleThresholdUs"=dword:00000001
+"RMLpwrGrRglIdleThresholdUs"=dword:00000001
+"RMLpwrMsIdleThresholdUs"=dword:00000001
+"VRDirectFlipDPCDelayUs"=dword:00000001

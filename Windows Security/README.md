@@ -1,6 +1,7 @@
 # Optimization-Windows / Windows Security
 
-Scripts to disable Windows Defender and related security services.
+> [!NOTE]
+> Scripts to disable Windows Defender and related security services. **Recommended to disable everything**.
 
 > These scripts significantly reduce system security but drastically improve performance and latency. The choice is yours, depending on your needs (I recommend all this).
 

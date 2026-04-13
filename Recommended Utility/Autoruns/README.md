@@ -1,15 +1,7 @@
-<div align="center">
 
 # 🔍 Autoruns — Sysinternals
 
-**L'outil de référence pour auditer, nettoyer et sécuriser tout ce qui démarre avec Windows.**
-
-[![Sysinternals](https://img.shields.io/badge/Microsoft-Sysinternals-0078D4?style=flat-square&logo=microsoft&logoColor=white)](https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns)
-[![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D4?style=flat-square&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
-[![Gratuit](https://img.shields.io/badge/Prix-Gratuit-brightgreen?style=flat-square)]()
-[![Portable](https://img.shields.io/badge/Type-Portable-orange?style=flat-square)]()
-
-</div>
+**L'outil de référence pour auditer, optimise, nettoyer et sécuriser tout ce qui démarre avec Windows.**
 
 ---
 

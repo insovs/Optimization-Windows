@@ -13,20 +13,6 @@
 
 A curated collection of scripts and tools to optimize your Windows system for maximum performance and minimum latency.
 
-## What's included
-
-Optimizations are organized into the following categories:
-
-| Category | Description |
-|---|---|
-| System | Core OS tweaks and registry edits |
-| Network | Latency and throughput improvements |
-| Services | Disable unnecessary background services |
-| Scheduled Tasks | Remove bloat from task scheduler |
-| Windows Security | Fine-tune security settings without compromising protection |
-
-Each item is standalone — apply only what you need.
-
 ## Usage
 
 > **Before anything**, create a system restore point.

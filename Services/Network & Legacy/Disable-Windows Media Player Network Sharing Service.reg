@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Disable WMPNetworkSvc (Windows Media Player Network Sharing Service)
+; This service shares your music, videos, and media library over the local network using DLNA.
+; It allows devices like Smart TVs, consoles (Xbox/PlayStation), or other PCs to access your media.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WMPNetworkSvc]
+"Start"=dword:00000004

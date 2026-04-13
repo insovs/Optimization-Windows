@@ -6,7 +6,7 @@
 This script targets every USB hub and controller detected on your system and disables all power management features at the registry level — selective suspend, idle power management, advanced power saving, and more. Designed for competitive players and professionals looking for the most complete and reliable way to eliminate input latency, micro-stutters and random disconnections caused by Windows USB power management.
 
 <details>
-<summary><b>► Show Preview Tool</b></summary>
+<summary><b>► Show Preview Script</b></summary>
 
 <img width="1192" height="489" alt="image" src="https://github.com/user-attachments/assets/00abe9f0-ab4c-41c1-b3a4-d3fa12231079" />
 <img width="1226" height="708" alt="image" src="https://github.com/user-attachments/assets/b9657419-a541-47f2-b2d1-e433c2cd8511" />

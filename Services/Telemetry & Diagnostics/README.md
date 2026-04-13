@@ -1,5 +1,5 @@
 # Telemetry & Diagnostics
-Services that send data to Microsoft in the background.
+Services that send data to Microsoft in the background. **Recommended to disable**.
 
 | File | Watch out |
 |------|-----------|

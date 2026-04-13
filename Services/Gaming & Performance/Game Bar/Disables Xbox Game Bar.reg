@@ -1,0 +1,21 @@
+Windows Registry Editor Version 5.00
+
+; Disables Xbox Game Bar, including auto-start, notifications.
+; Reduces background overhead and unwanted overlays during gameplay.
+
+; DISABLES GameBar via user settings.
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\GameBar]
+"ShowStartupPanel"=dword:00000000
+"UseNexusForGameBarEnabled"=dword:00000000
+"GamePanelStartupTipIndex"=dword:00000000
+
+; REMOVES Xbox Game Bar auto-start entry.
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run]
+"XboxGameBar"=-
+
+; REMOVES scheduled task for GameBar (if present).
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\Microsoft\GameBar]
+
+; DISABLES notifications related to Xbox Game Bar.
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Microsoft.XboxGamingOverlay_8wekyb3d8bbwe!App]
+"Enabled"=dword:00000000

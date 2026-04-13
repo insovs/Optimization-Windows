@@ -50,13 +50,6 @@ These settings should be disabled in the `nvram.txt` file to reduce latency and 
 > [!TIP]
 > **New to this?** Watch [@Ancel's video](https://www.youtube.com/watch?v=jRsaGmptP0E&t=91s) first — it walks through the full procedure with the tool.
 
-**Workflow at a glance:**
-
-```
-SCEWIN_FIX.reg  ──►  Export.bat  ──►  nvram.txt  ──►  Import.bat
-   (Step 1)           (Step 2)         (Step 3)         (Step 4)
-```
-
 ---
 
 ### 1️⃣ Apply the registry key

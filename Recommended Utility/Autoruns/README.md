@@ -42,9 +42,9 @@ The entries below are widely considered safe to disable on a typical desktop PC.
 
 | Entry | Description | Why it's safe |
 |-------|-------------|---------------|
-| `Telemetry` | DiagTrack, DiagnosticHub.StandardCollector.Service, dmwappushservice, DPS | Disables Microsoft telemetry collection — no functional impact |
-| `Bluetooth` | bthserv, BthA2dp, BluetoothUserService, BthHFEnum | Safe if you never use Bluetooth or don't use any Bluetooth peripherals |
-| `Wi-Fi` | WlanSvc | Safe if you never use Wi-Fi or don't use any Wi-Fi peripherals |
+| `Telemetry` | `DiagTrack`, `DiagnosticHub.StandardCollector.Service`, `dmwappushservice`, `DPS`, `WerSvc`, `wercplsupport`, `PcaSvc`, `DusmSvc` | Disables Microsoft telemetry, error reporting and compatibility data collection — no functional impact |
+| `Bluetooth` | `bthserv`, `BthA2dp`, `BluetoothUserService`, `BthHFEnum`, `BthAvctpSvc` | Safe if you never use Bluetooth or don't use any Bluetooth peripherals |
+| `Wi-Fi` | `WlanSvc` | Safe if you're on Ethernet only and never use Wi-Fi |
 
 ---
 

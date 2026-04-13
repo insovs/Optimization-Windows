@@ -5,7 +5,7 @@
 
 | File | Watch out |
 |------|-----------|
-| `Disable-DiagTrack.reg` | Feedback Hub app will stop working |
+| `Disable-Disable-Connected User Experiences and Telemetry.reg` | ... |
 | `Disable-DiagnosticPolicy.reg` | Windows built-in troubleshooters will stop working |
 | `Disable-WindowsErrorReporting.reg` | Crash dumps and error logs will no longer be sent — irrelevant for most users |
 | `Disable-WindowsInsiderService.reg` | Only needed if you are in the Insider Program |

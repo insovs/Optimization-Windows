@@ -84,6 +84,7 @@ schtasks /Change /TN "\Microsoft\Windows\SettingSync\NetworkStateChangeTask"    
 :: ── Shell / Family Safety ────────────────────────────────────────────────────
 schtasks /Change /TN "\Microsoft\Windows\Shell\FamilySafetyMonitor"                                /Disable
 schtasks /Change /TN "\Microsoft\Windows\Shell\FamilySafetyRefresh"                                /Disable
+schtasks /Change /TN "\Microsoft\Windows\Shell\FamilySafetyUpload"                                 /Disable
 
 :: ── Speech / Cortana ─────────────────────────────────────────────────────────
 schtasks /Change /TN "\Microsoft\Windows\Speech\SpeechModelDownloadTask"                           /Disable
@@ -105,6 +106,7 @@ schtasks /Change /TN "\Microsoft\Windows\PushToInstall\Registration"            
 :: ── Office Telemetry ─────────────────────────────────────────────────────────
 schtasks /Change /TN "\Microsoft\Office\OfficeTelemetryAgentFallBack"                              /Disable
 schtasks /Change /TN "\Microsoft\Office\OfficeTelemetryAgentLogOn"                                 /Disable
+schtasks /Change /TN "\Microsoft\Office\Office 15 Subscription Heartbeat"                          /Disable
 
 :: ── Cloud Experience Host ────────────────────────────────────────────────────
 schtasks /Change /TN "\Microsoft\Windows\CloudExperienceHost\CreateObjectTask"                     /Disable

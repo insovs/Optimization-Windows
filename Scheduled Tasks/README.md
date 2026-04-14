@@ -13,6 +13,8 @@ The script targets:
 * Maps, Feedback, Cortana, Error Reporting
 * Windows Update auxiliary tasks
 * Google Update tasks
+* Office Telemetry
+* Family Safety
 
 The script automatically elevates to Administrator.
 
@@ -68,6 +70,7 @@ Below is a table explaining **each disabled task** and its **default function** 
 | SettingSync NetworkStateChangeTask         | Syncs settings when network changes.                                  |
 | FamilySafetyMonitor                        | Parental control monitoring task.                                     |
 | FamilySafetyRefresh                        | Updates family safety data.                                           |
+| FamilySafetyUpload                         | Uploads family safety activity data to Microsoft.                     |
 | SpeechModelDownloadTask                    | Downloads new speech recognition models.                              |
 | SystemSoundsService                        | Manages default system sounds events.                                 |
 | WER QueueReporting                         | Sends Windows Error Reporting crash data.                             |
@@ -77,6 +80,7 @@ Below is a table explaining **each disabled task** and its **default function** 
 | PushToInstall Registration                 | Registers system for push installation events.                        |
 | OfficeTelemetryAgentFallBack               | Office usage telemetry.                                               |
 | OfficeTelemetryAgentLogOn                  | Sends Office telemetry on logon.                                      |
+| Office 15 Subscription Heartbeat           | Periodically validates Office 365 subscription status.                |
 | CloudExperienceHost CreateObjectTask       | Creates CEH objects for OOBE/UX.                                      |
 | CloudExperienceHost CreateUserTask         | Manages Cloud Experience Host user creation flow.                     |
 | UpdateOrchestrator Schedule Scan           | Schedules Windows Update scans.                                       |

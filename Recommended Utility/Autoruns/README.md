@@ -5,6 +5,13 @@ Autoruns is a **free, official Microsoft tool** (Sysinternals suite), created by
 
 > This is the tool used by power users to optimize their PC and by cybersecurity experts to track persistent malware.
 
+<details>
+<summary><b>► Show Preview Tool</b></summary>
+
+![AutorunsTool](https://github.com/user-attachments/assets/92ee879a-c3f6-4bb1-8b28-6c1fdc8ce317)
+
+</details>
+
 ---
 
 ## 📥 Download & Launch

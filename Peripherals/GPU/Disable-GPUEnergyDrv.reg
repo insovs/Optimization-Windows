@@ -1,7 +1,0 @@
-Windows Registry Editor Version 5.00
-
-; Disables the GpuEnergyDrv service (Windows GPU power management).
-; Prevents it from loading at startup to avoid any associated activity.
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\GpuEnergyDrv]
-"Start"=dword:00000004

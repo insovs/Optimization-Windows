@@ -1,0 +1,5 @@
+Windows Registry Editor Version 5.00
+
+; Disables the Network Data Usage monitor — stops per-app network tracking logged silently in the background.
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Ndu]
+"Start"=dword:00000004

@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+; Disables the Windows Troubleshooting Service — stops automatic diagnostic scans and data collection sent to Microsoft.
+; It automatically detects known issues on your system and applies fixes sourced from Microsoft servers, without any user action.
+; In practice it runs background scans, contacts Microsoft, and can silently change system settings.
+; No real benefit for an experienced user who manages their own system.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TroubleshootingSvc]
+"Start"=dword:00000004

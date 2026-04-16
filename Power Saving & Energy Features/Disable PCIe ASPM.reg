@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; PCIe ASPM puts devices like your GPU or NVMe SSD into low-power states between requests. 
+; Disabling it keeps them always-on — eliminates the latency spike when they wake back up.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\pci\Parameters]
+"ASPMOptOut"=dword:00000001 ;Tells Windows to ignore PCIe power-saving features (ASPM). Keeps PCIe devices (like GPUs, SSDs) always ready and avoids latency spikes.

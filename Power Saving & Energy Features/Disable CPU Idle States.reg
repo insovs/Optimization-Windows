@@ -1,0 +1,11 @@
+Windows Registry Editor Version 5.00
+
+; Prevents Windows from dropping the CPU into low-power idle states (C-states). 
+; The CPU stays ready at all times — lower latency, faster response to load spikes.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Throttle]
+"PerfEnablePackageIdle"=dword:00000000 ;Prevents the system from forcing CPU packages into idle states (C-states). Keeps the CPU more responsive but uses a bit more power.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Processor]
+"AllowPepPerfStates"=dword:00000000 ;Blocks Platform Energy Provider (PEP) from managing CPU performance states automatically. Basically, disables “smart” energy saving.
+"Cstates"=dword:00000000  Directly tells the CPU to ignore C-state requests at the hardware level — works alongside AllowPepPerfStates to fully prevent any idle state from being applied.

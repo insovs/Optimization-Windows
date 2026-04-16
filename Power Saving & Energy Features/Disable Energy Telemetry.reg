@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\EnergyEstimation\TaggedEnergy]
+
+; Windows tracks per-app power usage and reports it as telemetry. 
+; These keys disable that logging entirely — less background CPU work, no data sent.
+
+"DisableTaggedEnergyLogging"=dword:00000001 ;Turns off energy tracking logs that record how much power apps use. Less background logging = slightly less CPU use.
+"TelemetryMaxApplication"=dword:00000000 ;Stops Windows from collecting energy data per app for telemetry (data reporting).
+"TelemetryMaxTagPerApplication"=dword:00000000 ;Stops Windows from tagging and tracking extra details about app energy use.

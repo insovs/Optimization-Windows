@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Windows silently counts every read/write operation for monitoring purposes. 
+; This key disables that counter — small but unnecessary overhead removed.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\I/O System]
+"CountOperations"=dword:00000000 ;Disables operation counting in the I/O system Windows won’t measure how many read/write actions apps do. Reduces logging overhead.

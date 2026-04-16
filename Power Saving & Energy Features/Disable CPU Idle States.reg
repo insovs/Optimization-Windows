@@ -8,4 +8,4 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Processor]
 "AllowPepPerfStates"=dword:00000000 ;Blocks Platform Energy Provider (PEP) from managing CPU performance states automatically. Basically, disables “smart” energy saving.
-"Cstates"=dword:00000000  Directly tells the CPU to ignore C-state requests at the hardware level — works alongside AllowPepPerfStates to fully prevent any idle state from being applied.
+"Cstates"=dword:00000000  ;Directly tells the CPU to ignore C-state requests at the hardware level — works alongside AllowPepPerfStates to fully prevent any idle state from being applied.
